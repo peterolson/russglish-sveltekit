@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { lexicon } from '$lib/data/lexicon';
+	import { entryFor, lexicon } from '$lib/data/lexicon';
+
+	// A part is always a lexicon entry (lexicon.ts refuses to load otherwise), so
+	// the fallback is only here to keep the render total.
+	const roman = (key: string) => entryFor(key)?.roman ?? key;
 </script>
 
 <svelte:head>
@@ -21,13 +25,16 @@
 
 	<div class="entries">
 		{#each lexicon as entry (entry.entry)}
-			<article>
+			<article id={entry.entry}>
 				<header>
 					<h2 class="ortho">{entry.roman}</h2>
 					<span class="ipa">{entry.ipa}</span>
 					<code class="neutral" title="neutral orthography (canonical, typeable)"
 						>{entry.entry}</code
 					>
+					{#if entry.morphType && entry.morphType !== 'word'}
+						<span class="morph">{entry.morphType}</span>
+					{/if}
 				</header>
 
 				<table>
@@ -58,6 +65,18 @@
 				</table>
 
 				<footer>
+					{#if entry.derivedFrom?.length}
+						<div class="chips">
+							<span class="chip-label">Built from</span>
+							{#each entry.derivedFrom as part, i (part)}
+								{#if i > 0}<span class="join">+</span>{/if}
+								<span class="chip ortho">{roman(part)}</span>
+							{/each}
+						</div>
+					{/if}
+					{#if entry.senseShift}
+						{@render chips('Sense', [entry.senseShift])}
+					{/if}
 					{@render chips('Part of speech', entry.partOfSpeech)}
 					{@render chips('Derivation', entry.derivationTypes)}
 					{#if entry.borrowSources?.length}
@@ -70,23 +89,6 @@
 </main>
 
 <style>
-	:global(html) {
-		color-scheme: light dark;
-	}
-
-	.page {
-		max-width: 46rem;
-		margin: 0 auto;
-		padding: 2rem 1.25rem 4rem;
-		font-family:
-			system-ui,
-			-apple-system,
-			Segoe UI,
-			Roboto,
-			sans-serif;
-		line-height: 1.45;
-	}
-
 	h1 {
 		margin-bottom: 0.15rem;
 		font-size: 1.6rem;
@@ -123,15 +125,10 @@
 		font-size: 1.35rem;
 	}
 
-	/* Orthography cells carry combining marks (a̱ и̣), so prefer a face that
-	   positions them properly and give them room to breathe. */
-	.ortho {
-		font-family: 'Gentium Plus', 'Charis SIL', 'DejaVu Serif', Georgia, serif;
-		font-feature-settings: 'ccmp', 'mark';
-	}
-
+	/* IPA is combining-mark text too (/t̪θ/, /ə̃/), so it takes the orthography
+	   face rather than a sans stack that would have to be composed from two. */
 	.ipa {
-		font-family: 'Gentium Plus', 'Charis SIL', 'DejaVu Sans', sans-serif;
+		font-family: var(--ortho);
 		color: light-dark(#555, #aaa);
 		font-size: 1.05rem;
 	}
@@ -211,12 +208,17 @@
 		font-size: 0.78rem;
 	}
 
-	.visually-hidden {
-		position: absolute;
-		clip-path: inset(50%);
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		white-space: nowrap;
+	.join {
+		color: light-dark(#aaa, #666);
+		font-size: 0.78rem;
+	}
+
+	/* Bound morphemes are not words; say so next to the headword rather than
+	   letting -ät sit in the list looking like one. */
+	.morph {
+		color: light-dark(#8a3d1f, #e5a37e);
+		font-size: 0.7rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
 	}
 </style>

@@ -45,6 +45,24 @@ export const lexicon: DecodedEntry[] = (_lexicon as LexiconEntry[]).map((e) => {
 		throw new Error(`Russian IPA mismatch for ${e.entry}: ${ipa} !== ${ruIpa}`);
 	}
 
+	// A coincidence is the claim that nothing was borrowed — that the two
+	// languages arrived at the shape independently. Pairing it with 'borrowing',
+	// or naming a source it was borrowed from, asserts both at once.
+	if (e.derivationTypes.includes('coincidence')) {
+		if (e.derivationTypes.includes('borrowing')) {
+			throw new Error(
+				`${e.entry} is marked both 'coincidence' and 'borrowing' — a shape either ` +
+					`came from a shared source or it did not`
+			);
+		}
+		if (e.borrowSources?.length) {
+			throw new Error(
+				`${e.entry} is marked 'coincidence' but names borrowSources ` +
+					`(${e.borrowSources.join(', ')}); a coincidence is borrowed from nowhere`
+			);
+		}
+	}
+
 	// Exact duplicates first, so a true homophone reports as one rather than as
 	// whichever ear happens to be checked first.
 	claim(seenIpa, pron, e.entry, 'Duplicate pronunciation');
@@ -53,3 +71,38 @@ export const lexicon: DecodedEntry[] = (_lexicon as LexiconEntry[]).map((e) => {
 
 	return { ...e, roman: romanizeNeutral(e.entry), ipa };
 });
+
+// DERIVATION. A derived entry has to be pronounceable as its parts run together:
+// kreatIvAt is kreat'Iv + -At, /kreatɪv/ + /æt/. Checked in a second pass because
+// a part may be defined after the word that uses it.
+//
+// Stress is stripped from both sides before comparing. It belongs to the whole
+// word, not to the morphemes — kreat'Iv carries its own stress mark as a free
+// word, and the joined form re-runs the default rule over the longer word — so
+// comparing with stress in place would reject every correct derivation.
+const byEntry = new Map(lexicon.map((e) => [e.entry, e]));
+
+/** Look a word up by its neutral (canonical) form. */
+export function entryFor(entry: string): DecodedEntry | undefined {
+	return byEntry.get(entry);
+}
+
+const unstressed = (p: Pron): Pron => p.map((t) => (t.startsWith('ˈ') ? t.slice(1) : t));
+
+for (const e of lexicon) {
+	if (!e.derivedFrom?.length) continue;
+	const joined = e.derivedFrom.flatMap((key) => {
+		const part = byEntry.get(key);
+		if (!part) {
+			throw new Error(`${e.entry} is derived from "${key}", which is not in the lexicon`);
+		}
+		return unstressed(decodeNeutral(part.entry));
+	});
+	const whole = unstressed(decodeNeutral(e.entry));
+	if (joined.join(' ') !== whole.join(' ')) {
+		throw new Error(
+			`Derivation mismatch for ${e.entry}: /${whole.join('')}/, but its parts ` +
+				`(${e.derivedFrom.join(' + ')}) run together as /${joined.join('')}/`
+		);
+	}
+}

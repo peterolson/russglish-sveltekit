@@ -1,0 +1,87 @@
+/* Site-wide base. Component styles stay scoped in their .svelte files; what
+   lives here is the palette and the two type families every page needs. */
+
+/* Gentium 7.000 (SIL, OFL 1.1 — see ../fonts/OFL.txt), self-hosted UNSUBSETTED
+   and deliberately so. Every orthography on this site is a base letter plus a
+   combining mark: перио́д is о + U+0301, plu̱s is u + U+0331, /t̪θ/ is t + U+032A.
+   A mark only sits on its letter if BOTH come from the same font — the moment
+   the browser satisfies them from two files it has no attachment data to work
+   with and drops the mark beside the letter instead of over it.
+
+   That rules out the usual CDN/Fontsource delivery, which splits a family by
+   unicode-range: in those subsets U+0301 lives in `cyrillic`, U+0323 only in
+   `vietnamese`, and U+0331 and U+032A in no subset at all. Russian would pull
+   its letters from one file and its stress mark from another, and the English
+   column's underscored vowels would fall out of the family entirely. One file
+   that covers Latin, IPA, Greek and Cyrillic together is the whole point.
+
+   Regular and Bold are separate faces, so a page with no bold orthography (the
+   texts) never fetches the second file. */
+@font-face {
+	font-family: 'Gentium';
+	src: url('../fonts/Gentium-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gentium';
+	src: url('../fonts/Gentium-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	color-scheme: light dark;
+
+	--ink: light-dark(#161616, #e8e8e8);
+	--ink-soft: light-dark(#666, #999);
+	--ink-faint: light-dark(#888, #777);
+	--rule: light-dark(#ddd, #333);
+	--rule-faint: light-dark(#eee, #2a2a2a);
+	--fill: light-dark(#f6f6f6, #1c1c1c);
+	--accent: light-dark(#8a3d1f, #e5a37e);
+	--mark: light-dark(#fbe6b8, #4a3a10);
+
+	--sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	/* Orthography and IPA both carry combining marks (a̱ и̣ á̱ t̪), so they share
+	   one face. The @font-face family above shadows any installed Gentium, so
+	   the fallbacks only ever apply if the download fails. */
+	--ortho: 'Gentium', 'Gentium Plus', 'Charis SIL', 'DejaVu Serif', Georgia, serif;
+	--mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+body {
+	margin: 0;
+	background: light-dark(#fff, #111);
+	color: var(--ink);
+	font-family: var(--sans);
+	line-height: 1.45;
+}
+
+.page {
+	max-width: 46rem;
+	margin: 0 auto;
+	padding: 1rem 1.25rem 4rem;
+}
+
+.ortho {
+	font-family: var(--ortho);
+	/* mark = mark-to-base (á), mkmk = mark-to-mark, for the vowels carrying two
+	   (hooli̱gá̱n is a + macron-below + acute). Both are on by default; naming
+	   them documents what this text depends on. Gentium has no 'ccmp'. */
+	font-feature-settings:
+		'mark' 1,
+		'mkmk' 1;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	white-space: nowrap;
+}

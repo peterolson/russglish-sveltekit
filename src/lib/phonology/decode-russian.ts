@@ -3,7 +3,13 @@
 // stressed vowel (the reader columns use the acute; only neutral is typeable).
 // Precision marks: ш̣=[s̺] т̣=t̪θ в̣=w х̣=kx г̣=ɟ г̱=ɦ; vowels а̣/е̣=æ и̣=ɪ
 // и̱=əi; ў=/w/. Palatalization stripped (ь / iotation softness; /j/ on-glide of
-// я/е/ё/ю kept). Final obstruent devoicing. Unstressed -ер/-ел/-ен → /r l n/.
+// я/е/ё/ю kept). Unstressed -ер/-ел/-ен → /r l n/.
+//
+// NO final devoicing. Russian devoices its own final obstruents, but Russglish
+// does not inherit the rule: перио́д is /periˈod/, and a Russian reader who says
+// [t] there has an accent, not a different word. Devoicing here would cost the
+// English column the /d/ of ⟨period⟩ and ⟨hybrid⟩ — a real confusion for an
+// English reader — to prevent a Russian confusion that does not arise.
 
 import { placeStress, DENTAL_T, type Pron } from "./ipa.ts";
 import { DOT, UMAC, ACUTE } from "./marks.ts";
@@ -25,7 +31,6 @@ const DOT_ALT: Record<string, string> = {
   "а": "æ", "е": "æ", "и": "ɪ",
 };
 const UMAC_ALT: Record<string, string> = { "г": "ɦ", "и": "əi" };
-const DEVOICE: Record<string, string> = { "б": "p", "в": "f", "г": "k", "д": "t", "ж": "ʂ", "з": "s" };
 
 const isVowelChar = (c: string) => c in VOW;
 
@@ -36,9 +41,6 @@ export function decodeRussian(word: string): Pron {
   const n = s.length;
   const out: Pron = [];
   let explicitIdx: number | null = null;
-
-  let lastAlpha = -1;
-  for (let k = 0; k < n; k++) if (CONS[s[k]] || isVowelChar(s[k])) lastAlpha = k;
 
   let i = 0;
   let prevWasVowel = false;
@@ -76,7 +78,6 @@ export function decodeRussian(word: string): Pron {
     if (c === "н" && ["к", "г"].includes(s[i + 1])) { out.push("ŋ"); i += 1; prevWasVowel = false; continue; }
 
     if (CONS[c]) {
-      if (i === lastAlpha && DEVOICE[c]) { out.push(DEVOICE[c]); i += 1; prevWasVowel = false; continue; }
       if (s[i + 1] === c) { out.push(CONS[c]); i += 2; prevWasVowel = false; continue; }
       out.push(CONS[c]); i += 1; prevWasVowel = false; continue;
     }

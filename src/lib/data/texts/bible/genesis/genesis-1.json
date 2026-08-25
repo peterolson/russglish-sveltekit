@@ -1,0 +1,65 @@
+{
+	"name": "Genesis 1",
+	"order": 0,
+	"title": {
+		"enText": "In the beginning",
+		"ruText": "В начале",
+		"tokens": [
+			{
+				"entry": "start",
+				"refEn": ["beginning", 0],
+				"refRu": ["начале", 0]
+			},
+			{
+				"entry": "peri'od",
+				"refEn": ["In the", 0],
+				"refRu": ["В", 0]
+			}
+		]
+	},
+	"sentences": [
+		{
+			"enText": "In the beginning God created the heaven and the earth.",
+			"ruText": "В начале сотворил Бог небо и землю.",
+			"tokens": [
+				{
+					"entry": "start",
+					"refEn": ["beginning", 0],
+					"refRu": ["начале", 0]
+				},
+				{
+					"entry": "peri'od",
+					"refEn": ["In the", 0],
+					"refRu": ["В", 0],
+					"after": ","
+				},
+				{
+					"entry": "allah",
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"entry": "kreatIvAt",
+					"refEn": ["created", 0],
+					"refRu": ["сотворил", 0]
+				},
+				{
+					"entry": "Atmosfera",
+					"refEn": ["heaven", 0],
+					"refRu": ["небо", 0]
+				},
+				{
+					"entry": "plus",
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"entry": "planet",
+					"refEn": ["earth", 0],
+					"refRu": ["землю", 0],
+					"after": "."
+				}
+			]
+		}
+	]
+}
