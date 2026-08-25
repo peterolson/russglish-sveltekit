@@ -1,0 +1,14 @@
+[
+	{
+		"entry": "russglIX",
+		"entryEn": "Ru̱ssglish",
+		"entryRu": "руссгли̣ш",
+		"sourceEn": "Russian/English",
+		"sourceRu": "Русский/Инглиш",
+		"glossEn": "Russglish",
+		"glossRu": "Руссглиш",
+		"derivationTypes": ["portmanteau"],
+		"borrowSources": ["english", "russian"],
+		"partOfSpeech": ["noun", "adjective"]
+	}
+]
