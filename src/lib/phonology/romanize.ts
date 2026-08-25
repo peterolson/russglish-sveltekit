@@ -40,7 +40,7 @@ const ROMAN: Record<string, string> = {
 	I: 'ı', // /ɪ/ Turkish dotless i
 	A: 'æ', // /æ/
 	Y: 'ī', // /əi/
-	E: 'ę' // /ə̃/
+	E: 'an' // /ə̃/
 };
 
 const VOWEL_LETTERS = new Set(['a', 'e', 'i', 'o', 'u', 'I', 'A', 'Y', 'E']);

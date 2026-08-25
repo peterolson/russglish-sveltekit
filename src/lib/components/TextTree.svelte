@@ -1,13 +1,23 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { TextNode } from '$lib/data/texts';
+	import { line } from '$lib/text/render';
+	import { useOrthography } from '$lib/ui/labels.svelte';
 
 	type Props = { nodes: TextNode[] };
 	let { nodes }: Props = $props();
+
+	const orthography = useOrthography();
 </script>
 
 <!-- Recursive by way of a self-calling snippet: the corpus nests arbitrarily
-     deeply (Bible → Genesis → Genesis 1), so nothing here may assume a depth. -->
+     deeply (Bible → Genesis → Genesis 1), so nothing here may assume a depth.
+
+     A text is listed by its own Russglish title, in the reader's orthography —
+     the corpus is in the language, so its table of contents should be too. The
+     authored name (Genesis 1) stays as the tooltip, since a title taken from the
+     incipit does not always say which chapter it is. Folder labels are the
+     corpus's own, and are left alone. -->
 {#snippet branch(items: TextNode[])}
 	<ul>
 		{#each items as node (node.segments.join('/'))}
@@ -16,7 +26,13 @@
 					<span class="folder">{node.name}</span>
 					{@render branch(node.children)}
 				{:else}
-					<a href={resolve('/texts/[...path]', { path: node.segments.join('/') })}>{node.name}</a>
+					<a
+						class="ortho"
+						title={node.name}
+						href={resolve('/texts/[...path]', { path: node.segments.join('/') })}
+					>
+						{line(node.text.title, orthography.current)}
+					</a>
 				{/if}
 			</li>
 		{/each}
@@ -53,6 +69,7 @@
 
 	a {
 		color: var(--ink);
+		font-size: 1.05rem;
 		text-decoration-color: var(--rule);
 		text-underline-offset: 0.15em;
 	}

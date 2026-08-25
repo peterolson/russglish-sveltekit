@@ -84,8 +84,15 @@ export type Token = {
 };
 
 export type Sentence = {
+	// The number this line carries in its source (a verse number, say). Kept out
+	// of enText/ruText so it cannot be mistaken for something a token could
+	// reference, and so the two sources can share one numbering.
+	label?: string;
 	enText: string;
 	ruText: string;
+	// EMPTY means not translated yet. A scaffolded text is the source sentences
+	// with no tokens against them; they get filled in a line at a time, and the
+	// page shows which are still waiting.
 	tokens: Token[];
 };
 

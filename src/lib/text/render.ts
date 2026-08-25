@@ -7,13 +7,14 @@
 
 import { lookup } from '$lib/data/texts';
 import { offsetOf } from '$lib/data/refs';
+import { capitalizeIn, formOf, type Orthography } from '$lib/orthography';
 import type { Sentence, Token } from '$lib/data/schema.types';
 
 export type Word = {
 	index: number;
 	token: Token;
-	/** The reading form (romanized), capitalized as the sentence requires. */
-	roman: string;
+	/** The word in the reader's chosen orthography, capitalized as the sentence requires. */
+	form: string;
 	neutral: string;
 	ipa: string;
 	glossEn: string;
@@ -25,20 +26,23 @@ export type Word = {
 /** A run of source text, tagged with the token that claims it (or null). */
 export type Piece = { text: string; index: number | null };
 
-function capitalize(word: string): string {
-	// The first character may be followed by a combining mark (the stress acute),
-	// which slice() carries along untouched.
-	return word.charAt(0).toLocaleUpperCase() + word.slice(1);
-}
+// A `Sentence` is one line of a text, which may hold more than one actual
+// sentence once punctuation gets involved: "Planet — null forma; vakuum. Allah
+// phantom woda." So capitalization tracks full stops rather than just the start.
+const ENDS_SENTENCE = /[.!?…]["')\]]*\s*$/;
 
-export function words(sentence: Sentence): Word[] {
+export function words(sentence: Sentence, orthography: Orthography): Word[] {
+	let opensSentence = true;
 	return sentence.tokens.map((token, index) => {
 		const entry = lookup(token.entry);
 		const proper = entry.partOfSpeech.includes('proper noun');
+		const form = formOf(entry, orthography);
+		const capital = opensSentence || proper;
+		opensSentence = ENDS_SENTENCE.test(token.after ?? '');
 		return {
 			index,
 			token,
-			roman: index === 0 || proper ? capitalize(entry.roman) : entry.roman,
+			form: capital ? capitalizeIn(form, orthography) : form,
 			neutral: entry.entry,
 			ipa: entry.ipa,
 			glossEn: entry.glossEn,
@@ -47,6 +51,17 @@ export function words(sentence: Sentence): Word[] {
 			after: token.after ?? ''
 		};
 	});
+}
+
+/**
+ * A sentence as one plain Russglish string — for titles in lists, menus and
+ * document titles, where there is nowhere to hang the per-word interaction that
+ * SentenceView provides.
+ */
+export function line(sentence: Sentence, orthography: Orthography): string {
+	return words(sentence, orthography)
+		.map((word) => `${word.before}${word.form}${word.after}`)
+		.join(' ');
 }
 
 /**

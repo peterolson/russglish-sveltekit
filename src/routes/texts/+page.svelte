@@ -1,15 +1,18 @@
 <script lang="ts">
 	import TextTree from '$lib/components/TextTree.svelte';
 	import { allTexts, textTree } from '$lib/data/texts';
+	import { labels } from '$lib/ui/labels.svelte';
+
+	const t = labels();
 </script>
 
 <svelte:head>
-	<title>Russglish — Texts</title>
+	<title>{t.cap('site')} — {t.cap('texts')}</title>
 </svelte:head>
 
 <main class="page">
-	<h1>Texts</h1>
-	<p class="count">{allTexts.length} {allTexts.length === 1 ? 'text' : 'texts'}</p>
+	<h1 class="ortho">{t.cap('texts')}</h1>
+	<p class="count ortho">{allTexts.length} {t('texts')}</p>
 
 	<TextTree nodes={textTree} />
 </main>

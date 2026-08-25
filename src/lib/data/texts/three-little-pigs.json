@@ -2,8 +2,8 @@
 	"name": "Three Little Pigs",
 	"order": 1,
 	"title": {
-		"enText": "Three little pigs",
-		"ruText": "Три маленькие свиньи",
+		"enText": "Three little pigs and the big bad wolf",
+		"ruText": "Три маленькие свиньи и большой злой волк",
 		"tokens": [
 			{
 				"entry": "Tri",
@@ -19,50 +19,28 @@
 				"entry": "swYn",
 				"refEn": ["pigs", 0],
 				"refRu": ["свиньи", 0]
+			},
+			{
+				"entry": "plus",
+				"refEn": ["and", 0],
+				"refRu": ["и", 0]
+			},
+			{
+				"entry": "mega",
+				"refEn": ["big", 0],
+				"refRu": ["большой", 0]
+			},
+			{
+				"entry": "hulIg'an",
+				"refEn": ["bad", 0],
+				"refRu": ["злой", 0]
+			},
+			{
+				"entry": "wolk",
+				"refEn": ["wolf", 0],
+				"refRu": ["волк", 0]
 			}
 		]
 	},
-	"sentences": [
-		{
-			"enText": "Three little pigs and the big bad wolf",
-			"ruText": "Три маленькие свиньи и большой злой волк",
-			"tokens": [
-				{
-					"entry": "Tri",
-					"refEn": ["Three", 0],
-					"refRu": ["Три", 0]
-				},
-				{
-					"entry": "mIni",
-					"refEn": ["little", 0],
-					"refRu": ["маленькие", 0]
-				},
-				{
-					"entry": "swYn",
-					"refEn": ["pigs", 0],
-					"refRu": ["свиньи", 0]
-				},
-				{
-					"entry": "plus",
-					"refEn": ["and", 0],
-					"refRu": ["и", 0]
-				},
-				{
-					"entry": "mega",
-					"refEn": ["big", 0],
-					"refRu": ["большой", 0]
-				},
-				{
-					"entry": "hulIg'an",
-					"refEn": ["bad", 0],
-					"refRu": ["злой", 0]
-				},
-				{
-					"entry": "wolk",
-					"refEn": ["wolf", 0],
-					"refRu": ["волк", 0]
-				}
-			]
-		}
-	]
+	"sentences": []
 }

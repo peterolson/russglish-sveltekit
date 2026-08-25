@@ -1,18 +1,26 @@
 <script lang="ts">
 	import { entryFor, lexicon } from '$lib/data/lexicon';
+	import { formOf } from '$lib/orthography';
+	import { labels, useOrthography } from '$lib/ui/labels.svelte';
+
+	const orthography = useOrthography();
+	const t = labels();
 
 	// A part is always a lexicon entry (lexicon.ts refuses to load otherwise), so
 	// the fallback is only here to keep the render total.
-	const roman = (key: string) => entryFor(key)?.roman ?? key;
+	const form = (key: string) => {
+		const entry = entryFor(key);
+		return entry ? formOf(entry, orthography.current) : key;
+	};
 </script>
 
 <svelte:head>
-	<title>Russglish — Lexicon</title>
+	<title>{t.cap('site')} — {t.cap('lexicon')}</title>
 </svelte:head>
 
 {#snippet chips(label: string, values: readonly string[])}
 	<div class="chips">
-		<span class="chip-label">{label}</span>
+		<span class="chip-label ortho">{label}</span>
 		{#each values as value (value)}
 			<span class="chip">{value}</span>
 		{/each}
@@ -20,44 +28,44 @@
 {/snippet}
 
 <main class="page">
-	<h1>Lexicon</h1>
-	<p class="count">{lexicon.length} {lexicon.length === 1 ? 'entry' : 'entries'}</p>
+	<h1 class="ortho">{t.cap('lexicon')}</h1>
+	<p class="count ortho">{lexicon.length} {t('entries')}</p>
 
 	<div class="entries">
 		{#each lexicon as entry (entry.entry)}
 			<article id={entry.entry}>
 				<header>
-					<h2 class="ortho">{entry.roman}</h2>
+					<h2 class="ortho">{formOf(entry, orthography.current)}</h2>
 					<span class="ipa">{entry.ipa}</span>
 					<code class="neutral" title="neutral orthography (canonical, typeable)"
 						>{entry.entry}</code
 					>
 					{#if entry.morphType && entry.morphType !== 'word'}
-						<span class="morph">{entry.morphType}</span>
+						<span class="morph ortho">{t(entry.morphType === 'prefix' ? 'prefix' : 'suffix')}</span>
 					{/if}
 				</header>
 
 				<table>
 					<thead>
 						<tr>
-							<th class="row-label"><span class="visually-hidden">Field</span></th>
-							<th>English</th>
-							<th>Russian</th>
+							<th class="row-label"><span class="visually-hidden">{t('spelling')}</span></th>
+							<th class="ortho">{t('english')}</th>
+							<th class="ortho">{t('russian')}</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th class="row-label">Spelling</th>
+							<th class="row-label ortho">{t('spelling')}</th>
 							<td class="ortho">{entry.entryEn}</td>
 							<td class="ortho">{entry.entryRu}</td>
 						</tr>
 						<tr>
-							<th class="row-label">Gloss</th>
+							<th class="row-label ortho">{t('gloss')}</th>
 							<td>{entry.glossEn}</td>
 							<td>{entry.glossRu}</td>
 						</tr>
 						<tr>
-							<th class="row-label">Source</th>
+							<th class="row-label ortho">{t('source')}</th>
 							<td>{entry.sourceEn}</td>
 							<td>{entry.sourceRu}</td>
 						</tr>
@@ -67,20 +75,20 @@
 				<footer>
 					{#if entry.derivedFrom?.length}
 						<div class="chips">
-							<span class="chip-label">Built from</span>
+							<span class="chip-label ortho">{t('builtFrom')}</span>
 							{#each entry.derivedFrom as part, i (part)}
 								{#if i > 0}<span class="join">+</span>{/if}
-								<span class="chip ortho">{roman(part)}</span>
+								<span class="chip ortho">{form(part)}</span>
 							{/each}
 						</div>
 					{/if}
 					{#if entry.senseShift}
-						{@render chips('Sense', [entry.senseShift])}
+						{@render chips(t('sense'), [entry.senseShift])}
 					{/if}
-					{@render chips('Part of speech', entry.partOfSpeech)}
-					{@render chips('Derivation', entry.derivationTypes)}
+					{@render chips(t('partOfSpeech'), entry.partOfSpeech)}
+					{@render chips(t('derivation'), entry.derivationTypes)}
 					{#if entry.borrowSources?.length}
-						{@render chips('Borrowed from', entry.borrowSources)}
+						{@render chips(t('borrowedFrom'), entry.borrowSources)}
 					{/if}
 				</footer>
 			</article>

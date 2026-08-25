@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import type { Sentence } from '$lib/data/schema.types';
 	import { pieces, words } from '$lib/text/render';
+	import { labels, useOrthography } from '$lib/ui/labels.svelte';
 
 	type Props = { sentence: Sentence; heading?: boolean };
 	let { sentence, heading = false }: Props = $props();
@@ -10,14 +11,21 @@
 	// gloss row keeps its height either way so the page does not jump.
 	let active = $state<number | null>(null);
 
-	const line = $derived(words(sentence));
+	const orthography = useOrthography();
+	const t = labels();
+	const line = $derived(words(sentence, orthography.current));
 	const en = $derived(pieces(sentence, 'en'));
 	const ru = $derived(pieces(sentence, 'ru'));
 	const shown = $derived(active === null ? null : line[active]);
+	// No tokens means nobody has translated this line yet.
+	const pending = $derived(sentence.tokens.length === 0);
 </script>
 
-<div class="sentence" class:heading>
+<div class="sentence" class:heading class:pending>
+	{#if sentence.label}<span class="label" aria-hidden="true">{sentence.label}</span>{/if}
+
 	<p class="russglish ortho">
+		{#if pending}<span class="waiting" aria-label={t('noText')}>—</span>{/if}
 		{#each line as word (word.index)}{word.before}<button
 				type="button"
 				class="word"
@@ -25,7 +33,7 @@
 				onmouseenter={() => (active = word.index)}
 				onmouseleave={() => (active = null)}
 				onfocus={() => (active = word.index)}
-				onblur={() => (active = null)}>{word.roman}</button
+				onblur={() => (active = null)}>{word.form}</button
 			>{word.after + ' '}{/each}
 	</p>
 
@@ -57,9 +65,42 @@
 
 <style>
 	.sentence {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 0.15rem;
+	}
+
+	/* Verse numbers hang in the left margin where there is room for them, and
+	   fall back to sitting above the line on a narrow screen. */
+	.label {
+		position: absolute;
+		left: -2.25rem;
+		width: 2rem;
+		text-align: right;
+		color: var(--ink-faint);
+		font-size: 0.75rem;
+		font-variant-numeric: tabular-nums;
+		line-height: 1.9;
+	}
+
+	@media (max-width: 52rem) {
+		.label {
+			position: static;
+			width: auto;
+			text-align: left;
+			line-height: 1.4;
+		}
+	}
+
+	/* An untranslated verse keeps its sources but reads as unfinished, so the
+	   remaining work is visible by scrolling rather than by counting. */
+	.pending .source {
+		color: var(--ink-faint);
+	}
+
+	.waiting {
+		color: var(--rule);
 	}
 
 	p {

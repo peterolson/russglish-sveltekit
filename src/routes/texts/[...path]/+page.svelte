@@ -2,20 +2,28 @@
 	import { resolve } from '$app/paths';
 	import TextView from '$lib/components/TextView.svelte';
 	import { crumbs } from '$lib/data/texts';
+	import { line } from '$lib/text/render';
+	import { labels, useOrthography } from '$lib/ui/labels.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 
+	const t = labels();
+	const orthography = useOrthography();
+	// Folder names are the corpus's own labels (Bible, Genesis), not interface
+	// text, so they stay as authored.
 	const trail = $derived(crumbs(data.leaf.segments));
+	// The tab reads in the same script as the page under it.
+	const title = $derived(line(data.leaf.text.title, orthography.current));
 </script>
 
 <svelte:head>
-	<title>Russglish — {data.leaf.name}</title>
+	<title>{t.cap('site')} — {title}</title>
 </svelte:head>
 
 <main class="page">
 	<nav class="trail">
-		<a href={resolve('/texts')}>Texts</a>
+		<a class="ortho" href={resolve('/texts')}>{t.cap('texts')}</a>
 		{#each trail as name (name)}
 			<span aria-hidden="true">/</span>
 			<span>{name}</span>
@@ -32,9 +40,7 @@
 		gap: 0.4rem;
 		margin-bottom: 1.5rem;
 		color: var(--ink-faint);
-		font-size: 0.75rem;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
+		font-size: 0.8rem;
 	}
 
 	a {

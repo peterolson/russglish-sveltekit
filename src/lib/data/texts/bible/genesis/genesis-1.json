@@ -19,6 +19,7 @@
 	},
 	"sentences": [
 		{
+			"label": "1",
 			"enText": "In the beginning God created the heaven and the earth.",
 			"ruText": "В начале сотворил Бог небо и землю.",
 			"tokens": [
@@ -60,6 +61,242 @@
 					"after": "."
 				}
 			]
+		},
+		{
+			"label": "2",
+			"enText": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+			"ruText": "Земля же была безвидна и пуста, и тьма над бездною, и Дух Божий носился над водою.",
+			"tokens": [
+				{
+					"entry": "planet",
+					"refEn": ["earth", 0],
+					"refRu": ["Земля", 0],
+					"after": " —"
+				},
+				{
+					"entry": "null",
+					"refEn": ["without", 0],
+					"refRu": ["без", 0]
+				},
+				{
+					"entry": "forma",
+					"refEn": ["form", 0],
+					"refRu": ["видна", 0],
+					"after": ";"
+				},
+				{
+					"entry": "v'Akuum",
+					"refEn": ["void", 0],
+					"refRu": ["пуста", 0],
+					"after": "."
+				},
+				{
+					"entry": "mrk",
+					"refEn": ["darkness", 0],
+					"refRu": ["тьма", 0],
+					"after": "."
+				},
+				{
+					"entry": "allah",
+					"refEn": ["God", 0],
+					"refRu": ["Божий", 0]
+				},
+				{
+					"entry": "fAnt'om",
+					"refEn": ["Spirit", 0],
+					"refRu": ["Дух", 0]
+				},
+				{
+					"entry": "levItAt",
+					"refEn": ["moved", 0],
+					"refRu": ["носился", 0]
+				},
+				{
+					"entry": "supr",
+					"refEn": ["upon", 1],
+					"refRu": ["над", 1]
+				},
+				{
+					"entry": "woDa",
+					"refEn": ["waters", 0],
+					"refRu": ["водою", 0],
+					"after": "."
+				}
+			]
+		},
+		{
+			"label": "3",
+			"enText": "And God said, Let there be light: and there was light.",
+			"ruText": "И сказал Бог: да будет свет. И стал свет.",
+			"tokens": []
+		},
+		{
+			"label": "4",
+			"enText": "And God saw the light, that it was good: and God divided the light from the darkness.",
+			"ruText": "И увидел Бог свет, что он хорош, и отделил Бог свет от тьмы.",
+			"tokens": []
+		},
+		{
+			"label": "5",
+			"enText": "And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+			"ruText": "И назвал Бог свет днём, а тьму ночью. И был вечер, и было утро: день один.",
+			"tokens": []
+		},
+		{
+			"label": "6",
+			"enText": "And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.",
+			"ruText": "И сказал Бог: да будет твердь посреди воды, и да отделяет она воду от воды.",
+			"tokens": []
+		},
+		{
+			"label": "7",
+			"enText": "And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.",
+			"ruText": "И создал Бог твердь, и отделил воду, которая под твердью, от воды, которая над твердью. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "8",
+			"enText": "And God called the firmament Heaven. And the evening and the morning were the second day.",
+			"ruText": "И назвал Бог твердь небом. И был вечер, и было утро: день второй.",
+			"tokens": []
+		},
+		{
+			"label": "9",
+			"enText": "And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.",
+			"ruText": "И сказал Бог: да соберётся вода, которая под небом, в одно место, и да явится суша. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "10",
+			"enText": "And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.",
+			"ruText": "И назвал Бог сушу землёю, а собрание вод назвал морями. И увидел Бог, что это хорошо.",
+			"tokens": []
+		},
+		{
+			"label": "11",
+			"enText": "And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.",
+			"ruText": "И сказал Бог: да произрастит земля зелень, траву, сеющую семя, дерево плодовитое, приносящее по роду своему плод, в котором семя его на земле. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "12",
+			"enText": "And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good.",
+			"ruText": "И произвела земля зелень, траву, сеющую семя по роду её, и дерево, приносящее плод, в котором семя его по роду его. И увидел Бог, что это хорошо.",
+			"tokens": []
+		},
+		{
+			"label": "13",
+			"enText": "And the evening and the morning were the third day.",
+			"ruText": "И был вечер, и было утро: день третий.",
+			"tokens": []
+		},
+		{
+			"label": "14",
+			"enText": "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:",
+			"ruText": "И сказал Бог: да будут светила на тверди небесной для отделения дня от ночи, и для знамений, и времён, и дней, и годов;",
+			"tokens": []
+		},
+		{
+			"label": "15",
+			"enText": "And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.",
+			"ruText": "И да будут они светильниками на тверди небесной, чтобы светить на землю. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "16",
+			"enText": "And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.",
+			"ruText": "И создал Бог два светила великие: светило большее, для управления днём, и светило меньшее, для управления ночью, и звёзды;",
+			"tokens": []
+		},
+		{
+			"label": "17",
+			"enText": "And God set them in the firmament of the heaven to give light upon the earth,",
+			"ruText": "И поставил их Бог на тверди небесной, чтобы светить на землю,",
+			"tokens": []
+		},
+		{
+			"label": "18",
+			"enText": "And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.",
+			"ruText": "и управлять днём и ночью, и отделять свет от тьмы. И увидел Бог, что это хорошо.",
+			"tokens": []
+		},
+		{
+			"label": "19",
+			"enText": "And the evening and the morning were the fourth day.",
+			"ruText": "И был вечер, и было утро: день четвёртый.",
+			"tokens": []
+		},
+		{
+			"label": "20",
+			"enText": "And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.",
+			"ruText": "И сказал Бог: да произведёт вода пресмыкающихся, душу живую; и птицы да полетят над землёю, по тверди небесной.",
+			"tokens": []
+		},
+		{
+			"label": "21",
+			"enText": "And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good.",
+			"ruText": "И сотворил Бог рыб больших и всякую душу животных пресмыкающихся, которых произвела вода, по роду их, и всякую птицу пернатую по роду её. И увидел Бог, что это хорошо.",
+			"tokens": []
+		},
+		{
+			"label": "22",
+			"enText": "And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.",
+			"ruText": "И благословил их Бог, говоря: плодитесь и размножайтесь, и наполняйте воды в морях, и птицы да размножаются на земле.",
+			"tokens": []
+		},
+		{
+			"label": "23",
+			"enText": "And the evening and the morning were the fifth day.",
+			"ruText": "И был вечер, и было утро: день пятый.",
+			"tokens": []
+		},
+		{
+			"label": "24",
+			"enText": "And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.",
+			"ruText": "И сказал Бог: да произведёт земля душу живую по роду её, скотов, и гадов, и зверей земных по роду их. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "25",
+			"enText": "And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it was good.",
+			"ruText": "И создал Бог зверей земных по роду их, и скот по роду его, и всех гадов земных по роду их. И увидел Бог, что это хорошо.",
+			"tokens": []
+		},
+		{
+			"label": "26",
+			"enText": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+			"ruText": "И сказал Бог: сотворим человека по образу Нашему и по подобию Нашему, и да владычествуют они над рыбами морскими, и над птицами небесными, и над скотом, и над всею землёю, и над всеми гадами, пресмыкающимися по земле.",
+			"tokens": []
+		},
+		{
+			"label": "27",
+			"enText": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+			"ruText": "И сотворил Бог человека по образу Своему, по образу Божию сотворил его; мужчину и женщину сотворил их.",
+			"tokens": []
+		},
+		{
+			"label": "28",
+			"enText": "And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.",
+			"ruText": "И благословил их Бог, и сказал им Бог: плодитесь и размножайтесь, и наполняйте землю, и обладайте ею, и владычествуйте над рыбами морскими, и над птицами небесными, и над всяким животным, пресмыкающимся по земле.",
+			"tokens": []
+		},
+		{
+			"label": "29",
+			"enText": "And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.",
+			"ruText": "И сказал Бог: вот, Я дал вам всякую траву, сеющую семя, какая есть на всей земле, и всякое дерево, у которого плод древесный, сеющий семя, — вам сие будет в пищу;",
+			"tokens": []
+		},
+		{
+			"label": "30",
+			"enText": "And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.",
+			"ruText": "А всем зверям земным, и всем птицам небесным, и всякому пресмыкающемуся по земле, в котором душа живая, дал Я всю зелень травную в пищу. И стало так.",
+			"tokens": []
+		},
+		{
+			"label": "31",
+			"enText": "And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.",
+			"ruText": "И увидел Бог всё, что Он создал, и вот, хорошо весьма. И был вечер, и было утро: день шестой.",
+			"tokens": []
 		}
 	]
 }
