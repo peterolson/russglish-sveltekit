@@ -7,6 +7,10 @@ import { prettyIPA, type Pron } from '$lib/phonology/ipa';
 import { englishEar, russianEar } from '$lib/phonology/projections';
 import { romanizeNeutral } from '$lib/phonology/romanize';
 
+// Which phoneme to pick when the two languages disagree about a vowel is a
+// per-word decision; the rules the lexicon follows are in
+// ../phonology/vowels.md.
+//
 // A lexicon entry plus its reading form and its pronunciation. There is only
 // ONE `ipa` field because convergence is the whole point: the three orthographies
 // must decode to the same phonemes, and the loop below throws if they don't.

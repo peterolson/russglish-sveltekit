@@ -88,6 +88,14 @@ export function decodeEnglish(word: string): Pron {
 	// hyphenated compound: each part is its own stress domain (decode separately)
 	if (word.includes('-')) return word.split('-').filter(Boolean).flatMap(decodeEnglish);
 	const s = word.toLowerCase();
+
+	// The bare word ⟨y⟩ is /i/, the Spanish value, unconditioned. This is the
+	// LETTER standing alone rather than a ⟨y⟩ inside a word, so none of English's
+	// own readings apply (my /əi/, gym /ɪ/) and the conjunction needs no mark —
+	// which matters because this column's marks go BELOW, and a descender has no
+	// room for one.
+	if (s === 'y') return ['i'];
+
 	const n = s.length;
 	const out: Pron = [];
 	let i = 0;
@@ -112,6 +120,17 @@ export function decodeEnglish(word: string): Pron {
 			continue;
 		}
 
+		// -sion → /ziə̃/, the same ending one letter over: vision/визия,
+		// division/дивизия, revision/ревизия. English says /ʒ/ here and Russian /z/,
+		// and there is no compromise phone between them, so the Russian value wins
+		// and an English reader's /ʒ/ is simply their accent — the same bargain
+		// ⟨-tion⟩ already makes for /ʃ/.
+		if (rest === 'sion') {
+			out.push('z', 'i', 'ə̃');
+			i += 4;
+			continue;
+		}
+
 		// ---- marked consonants & consonant digraphs (order matters) ----
 		if (c === 't' && s[i + 1] === DOT && s[i + 2] === 'h') {
 			out.push('f');
@@ -123,6 +142,15 @@ export function decodeEnglish(word: string): Pron {
 			i += 2;
 			continue;
 		} // ṭ→[t̪] (Grimm t↔d)
+		// s̱ → /z/. English writes a great many /z/ with ⟨s⟩ — visual, music, easy,
+		// season, rose — and Russian writes them with ⟨з⟩, so without this the
+		// English column would have to respell (⟨vizual⟩) and lose the word. The
+		// underdot is already spoken for by [s̺], so /z/ takes the macron.
+		if (c === 's' && s[i + 1] === UMAC) {
+			out.push('z');
+			i += 2;
+			continue;
+		}
 		if (c === 's' && s[i + 1] === DOT) {
 			out.push('s̺');
 			i += 2;
@@ -184,7 +212,12 @@ export function decodeEnglish(word: string): Pron {
 		}
 
 		// ---- vowels ----
-		if (isVowelLetter(c) || (c === 'y' && i > 0 && !isVowelLetter(s[i - 1]))) {
+		// ⟨y⟩ is the consonant /j/ when a vowel FOLLOWS it — yes, canyon, beyond —
+		// and a nucleus otherwise: hybrid, my, and the bare word ⟨y̱⟩. The
+		// preceding-letter test stays so an offglide after a vowel (boy) is left
+		// alone. The old rule keyed only on what came before, which made the ⟨y⟩ of
+		// canyon a vowel.
+		if (isVowelLetter(c) || (c === 'y' && !isVowelLetter(s[i - 1]) && !isVowelLetter(s[i + 1]))) {
 			let toks: string[];
 			let adv: number;
 			const three = s.slice(i, i + 3);

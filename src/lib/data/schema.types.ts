@@ -5,7 +5,8 @@
 // name: nothing was borrowed from anywhere. lexicon.ts enforces both.
 export type DerivationType =
 	'onomatopoeia' | 'borrowing' | 'portmanteau' | 'coincidence' | 'compound' | 'affixation';
-export type BorrowSource = 'english' | 'russian' | 'latin' | 'greek' | 'french' | 'pie' | 'arabic';
+export type BorrowSource =
+	'english' | 'russian' | 'latin' | 'greek' | 'french' | 'spanish' | 'pie' | 'arabic';
 export type PartOfSpeech =
 	| 'noun'
 	| 'verb'
@@ -74,13 +75,29 @@ export type SourceRef = [text: string, occurrence: number];
 
 export type Token = {
 	entry: string;
-	refEn: SourceRef;
-	refRu: SourceRef;
 	// Literal characters rendered around the token — punctuation, quotes, dashes.
 	// They belong to the sentence, not to the lexeme, so they live here rather
 	// than being smuggled into an entry.
 	before?: string;
 	after?: string;
+};
+
+// The unit of translation: the Russglish word or words that jointly render one
+// span of each source.
+//
+// Most phrases hold a single word, and it is tempting to make that the only
+// case. But correspondence is not always word-for-word, and forcing it splits
+// things that do not decompose: "Start period" renders "In the beginning" as a
+// whole, and giving peri'od the "In the" half on its own asserts that the word
+// MEANS "In the". It does not. Likewise null + forma together render безвидна,
+// which is one Russian word and cannot be cut in half honestly.
+//
+// So the ref lives on the phrase, not the word. Align as finely as the languages
+// actually align, and group only where they refuse to.
+export type Phrase = {
+	tokens: Token[];
+	refEn: SourceRef;
+	refRu: SourceRef;
 };
 
 export type Sentence = {
@@ -91,9 +108,9 @@ export type Sentence = {
 	enText: string;
 	ruText: string;
 	// EMPTY means not translated yet. A scaffolded text is the source sentences
-	// with no tokens against them; they get filled in a line at a time, and the
+	// with no phrases against them; they get filled in a line at a time, and the
 	// page shows which are still waiting.
-	tokens: Token[];
+	phrases: Phrase[];
 };
 
 // One text, as authored in src/lib/data/texts/**.json. `name` and `order` are

@@ -41,11 +41,34 @@
 		"entryRu": "плюс",
 		"sourceEn": "plus",
 		"sourceRu": "плюс",
-		"glossEn": "and; plus",
-		"glossRu": "и; плюс",
+		"glossEn": "and (joining terms); plus",
+		"glossRu": "и (соединяет члены); плюс",
 		"derivationTypes": ["borrowing"],
 		"borrowSources": ["latin"],
 		"partOfSpeech": ["conjunction", "preposition"]
+	},
+	{
+		"entry": "i",
+		"entryEn": "y",
+		"entryRu": "и",
+		"sourceEn": "Spanish y",
+		"sourceRu": "и",
+		"glossEn": "and, and then (joining clauses)",
+		"glossRu": "и (соединяет предложения)",
+		"derivationTypes": ["coincidence"],
+		"partOfSpeech": ["conjunction"]
+	},
+	{
+		"entry": "go",
+		"entryEn": "go",
+		"entryRu": "го",
+		"sourceEn": "go",
+		"sourceRu": "го",
+		"glossEn": "let, may (imperative particle)",
+		"glossRu": "да, пусть (повелительная частица)",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["english"],
+		"partOfSpeech": ["particle"]
 	},
 	{
 		"entry": "HYbrId",
@@ -150,11 +173,11 @@
 		"entryRu": "старт",
 		"sourceEn": "start",
 		"sourceRu": "старт",
-		"glossEn": "start, beginning; initial",
-		"glossRu": "начало; начальный",
+		"glossEn": "to begin, to come to be; start, beginning; initial",
+		"glossRu": "начинать(ся), возникать; начало; начальный",
 		"derivationTypes": ["borrowing"],
 		"borrowSources": ["english"],
-		"partOfSpeech": ["noun", "adjective"]
+		"partOfSpeech": ["verb", "noun", "adjective"]
 	},
 	{
 		"entry": "peri'od",
@@ -181,9 +204,9 @@
 		"partOfSpeech": ["proper noun"]
 	},
 	{
-		"entry": "kreat'Iv",
-		"entryEn": "crẹa̱tị́ve",
-		"entryRu": "креати̣́в",
+		"entry": "kreAt'Iv",
+		"entryEn": "crẹạtị́ve",
+		"entryRu": "креа̣ти̣́в",
 		"sourceEn": "creative",
 		"sourceRu": "креатив",
 		"glossEn": "creative; a creative work",
@@ -205,16 +228,16 @@
 		"morphType": "suffix"
 	},
 	{
-		"entry": "kreatIvAt",
-		"entryEn": "crẹa̱tịvạte",
-		"entryRu": "креати̣ва̣ть",
+		"entry": "kreAtIv'At",
+		"entryEn": "crẹạtịvạ́te",
+		"entryRu": "креа̣ти̣ва̣́ть",
 		"sourceEn": "creative + -ate",
 		"sourceRu": "креатив + -ать",
 		"glossEn": "to create",
 		"glossRu": "создавать",
 		"derivationTypes": ["affixation"],
 		"partOfSpeech": ["verb"],
-		"derivedFrom": ["kreat'Iv", "-At"]
+		"derivedFrom": ["kreAt'Iv", "-At"]
 	},
 	{
 		"entry": "Atmosfera",
@@ -353,9 +376,9 @@
 		"partOfSpeech": ["noun"]
 	},
 	{
-		"entry": "derivaciE",
-		"entryEn": "dẹri̱va̱tion",
-		"entryRu": "деривация",
+		"entry": "derivAciE",
+		"entryEn": "dẹri̱vạtion",
+		"entryRu": "дерива̣ция",
 		"sourceEn": "derivation",
 		"sourceRu": "деривация",
 		"glossEn": "derivation",
@@ -456,8 +479,8 @@
 		"entryRu": "ва̣́куум",
 		"sourceEn": "vacuum",
 		"sourceRu": "вакуум",
-		"glossEn": "void, emptiness; vacuum",
-		"glossRu": "пустота, ничто; вакуум",
+		"glossEn": "abyss, the deep; vacuum",
+		"glossRu": "бездна, пустота; вакуум",
 		"derivationTypes": ["borrowing"],
 		"borrowSources": ["latin"],
 		"partOfSpeech": ["noun"],
@@ -469,12 +492,73 @@
 		"entryRu": "фа̣нто́м",
 		"sourceEn": "phantom",
 		"sourceRu": "фантом",
-		"glossEn": "spirit, ghost; phantom",
-		"glossRu": "дух, призрак; фантом",
+		"glossEn": "ghost, apparition; phantom",
+		"glossRu": "призрак, привидение; фантом",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "KAos",
+		"entryEn": "khạos",
+		"entryRu": "х̣а̣ос",
+		"sourceEn": "chaos",
+		"sourceRu": "хаос",
+		"glossEn": "chaos, formless waste",
+		"glossRu": "хаос",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "'aura",
+		"entryEn": "á̱ura",
+		"entryRu": "а́ура",
+		"sourceEn": "aura",
+		"sourceRu": "аура",
+		"glossEn": "spirit, presence; aura",
+		"glossRu": "дух, присутствие; аура",
 		"derivationTypes": ["borrowing"],
 		"borrowSources": ["greek"],
 		"partOfSpeech": ["noun"],
 		"senseShift": "near-synonym"
+	},
+	{
+		"entry": "vIzual'At",
+		"entryEn": "vịs̱ua̱lạ́te",
+		"entryRu": "ви̣зуала̣́ть",
+		"sourceEn": "visual",
+		"sourceRu": "визуальный",
+		"glossEn": "to see, to look at",
+		"glossRu": "видеть, смотреть",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"]
+	},
+	{
+		"entry": "foton",
+		"entryEn": "photon",
+		"entryRu": "фотон",
+		"sourceEn": "photon",
+		"sourceRu": "фотон",
+		"glossEn": "light; a photon",
+		"glossRu": "свет; фотон",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"],
+		"senseShift": "metonymy"
+	},
+	{
+		"entry": "kAnyon",
+		"entryEn": "canyon",
+		"entryRu": "ка̣ньон",
+		"sourceEn": "canyon",
+		"sourceRu": "каньон",
+		"glossEn": "canyon, gorge, chasm",
+		"glossRu": "каньон, ущелье",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["spanish"],
+		"partOfSpeech": ["noun"]
 	},
 	{
 		"entry": "mrk",
@@ -489,9 +573,22 @@
 		"partOfSpeech": ["noun"]
 	},
 	{
-		"entry": "levItAt",
-		"entryEn": "lẹvịtạte",
-		"entryRu": "леви̣та̣ть",
+		"entry": "deklAr'At",
+		"entryEn": "declạrạ́te",
+		"entryRu": "декла̣ра̣́ть",
+		"sourceEn": "declare, declaration",
+		"sourceRu": "декларировать, декларация",
+		"glossEn": "to declare, to say",
+		"glossRu": "заявлять, говорить",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"],
+		"senseShift": "broadening"
+	},
+	{
+		"entry": "levIt'At",
+		"entryEn": "lẹvịtạ́te",
+		"entryRu": "леви̣та̣́ть",
 		"sourceEn": "levitate",
 		"sourceRu": "левитировать",
 		"glossEn": "to hover, float above",

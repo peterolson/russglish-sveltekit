@@ -91,6 +91,13 @@ export function decodeRussian(word: string): Pron {
 			prevWasVowel = false;
 			continue;
 		}
+		// -зия, the partner of English -sion (визия, дивизия, ревизия).
+		if (rest === 'зия') {
+			out.push('z', 'i', 'ə̃');
+			i += 3;
+			prevWasVowel = false;
+			continue;
+		}
 		if (c === 'д' && s[i + 1] === 'ж') {
 			out.push('dʒ');
 			i += 2;
@@ -157,6 +164,17 @@ export function decodeRussian(word: string): Pron {
 				continue;
 			}
 			out.push(CONS[c]);
+			i += 1;
+			prevWasVowel = false;
+			continue;
+		}
+
+		// A SEPARATING ь/ъ before a vowel is a real /j/ — каньон, статья, объект —
+		// not palatalization. Only the palatalizing kind is stripped; the header
+		// above already says the /j/ on-glide of я/е/ё/ю is kept, and this is the
+		// same sound written the other way round.
+		if ((c === 'ь' || c === 'ъ') && isVowelChar(s[i + 1])) {
+			out.push('j');
 			i += 1;
 			prevWasVowel = false;
 			continue;

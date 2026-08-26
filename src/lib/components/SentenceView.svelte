@@ -7,8 +7,9 @@
 	type Props = { sentence: Sentence; heading?: boolean };
 	let { sentence, heading = false }: Props = $props();
 
-	// Which token the reader is pointing at. Null when nothing is active; the
-	// gloss row keeps its height either way so the page does not jump.
+	// Which WORD the reader is pointing at — the gloss is a property of the word.
+	// Null when nothing is active; the gloss row keeps its height either way so
+	// the page does not jump.
 	let active = $state<number | null>(null);
 
 	const orthography = useOrthography();
@@ -17,8 +18,12 @@
 	const en = $derived(pieces(sentence, 'en'));
 	const ru = $derived(pieces(sentence, 'ru'));
 	const shown = $derived(active === null ? null : line[active]);
-	// No tokens means nobody has translated this line yet.
-	const pending = $derived(sentence.tokens.length === 0);
+	// ...but HIGHLIGHTING is a property of the phrase. One word of a phrase does
+	// not correspond to any part of the source on its own, so pointing at it
+	// lights the whole unit on all three lines.
+	const lit = $derived(shown?.phrase ?? null);
+	// No phrases means nobody has translated this line yet.
+	const pending = $derived(sentence.phrases.length === 0);
 </script>
 
 <div class="sentence" class:heading class:pending>
@@ -29,7 +34,7 @@
 		{#each line as word (word.index)}{word.before}<button
 				type="button"
 				class="word"
-				class:active={active === word.index}
+				class:active={word.phrase === lit}
 				onmouseenter={() => (active = word.index)}
 				onmouseleave={() => (active = null)}
 				onfocus={() => (active = word.index)}
@@ -40,14 +45,14 @@
 	<p class="source ortho" lang="en">
 		{#each en as piece, i (i)}<span
 				class="piece"
-				class:active={piece.index !== null && piece.index === active}>{piece.text}</span
+				class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
 			>{/each}
 	</p>
 
 	<p class="source ortho" lang="ru">
 		{#each ru as piece, i (i)}<span
 				class="piece"
-				class:active={piece.index !== null && piece.index === active}>{piece.text}</span
+				class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
 			>{/each}
 	</p>
 

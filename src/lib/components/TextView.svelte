@@ -10,7 +10,7 @@
 
 	// Digits, not words: how much of a scaffolded text is done reads the same in
 	// every orthography.
-	const done = $derived(text.sentences.filter((sentence) => sentence.tokens.length).length);
+	const done = $derived(text.sentences.filter((sentence) => sentence.phrases.length).length);
 </script>
 
 <article>

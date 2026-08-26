@@ -45,24 +45,24 @@ function titleCase(slug: string): string {
 		.join(' ');
 }
 
-type Span = { start: number; end: number; entry: string };
+type Span = { start: number; end: number; label: string };
 
 function checkRef(
 	where: string,
-	entry: string,
+	label: string,
 	side: string,
 	text: string,
 	ref: SourceRef,
 	taken: Span[]
 ) {
 	const [needle, occurrence] = ref;
-	if (!needle) throw new Error(`${where}: ${entry} has an empty ${side} reference`);
+	if (!needle) throw new Error(`${where}: ${label} has an empty ${side} reference`);
 	const found = occurrences(text, needle);
 	const start = found[occurrence];
 	if (start === undefined) {
 		const has = found.length === 1 ? 'it occurs once' : `it occurs ${found.length} times`;
 		throw new Error(
-			`${where}: ${entry} wants occurrence ${occurrence} of ${side} "${needle}", but ` +
+			`${where}: ${label} wants occurrence ${occurrence} of ${side} "${needle}", but ` +
 				`${found.length ? has : 'it does not occur in the sentence'}: "${text}"`
 		);
 	}
@@ -70,22 +70,29 @@ function checkRef(
 	const clash = taken.find((s) => start < s.end && s.start < end);
 	if (clash) {
 		throw new Error(
-			`${where}: ${entry} and ${clash.entry} both claim ${side} characters ` +
+			`${where}: ${label} and ${clash.label} both claim ${side} characters ` +
 				`${Math.max(start, clash.start)}–${Math.min(end, clash.end)} of "${text}"`
 		);
 	}
-	taken.push({ start, end, entry });
+	taken.push({ start, end, label });
 }
 
 function checkSentence(where: string, sentence: Sentence): void {
 	const takenEn: Span[] = [];
 	const takenRu: Span[] = [];
-	for (const token of sentence.tokens) {
-		if (!entryFor(token.entry)) {
-			throw new Error(`${where}: token "${token.entry}" is not in the lexicon`);
+	for (const phrase of sentence.phrases) {
+		if (!phrase.tokens.length) {
+			throw new Error(`${where}: a phrase claiming "${phrase.refEn[0]}" has no words`);
 		}
-		checkRef(where, token.entry, 'English', sentence.enText, token.refEn, takenEn);
-		checkRef(where, token.entry, 'Russian', sentence.ruText, token.refRu, takenRu);
+		for (const token of phrase.tokens) {
+			if (!entryFor(token.entry)) {
+				throw new Error(`${where}: token "${token.entry}" is not in the lexicon`);
+			}
+		}
+		// Named by its words, since a phrase has no single entry to blame.
+		const label = phrase.tokens.map((token) => token.entry).join(' + ');
+		checkRef(where, label, 'English', sentence.enText, phrase.refEn, takenEn);
+		checkRef(where, label, 'Russian', sentence.ruText, phrase.refRu, takenRu);
 	}
 }
 

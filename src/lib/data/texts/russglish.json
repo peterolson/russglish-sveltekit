@@ -4,9 +4,13 @@
 	"title": {
 		"enText": "Russglish",
 		"ruText": "Руссглиш",
-		"tokens": [
+		"phrases": [
 			{
-				"entry": "russglIX",
+				"tokens": [
+					{
+						"entry": "russglIX"
+					}
+				],
 				"refEn": ["Russglish", 0],
 				"refRu": ["Руссглиш", 0]
 			}
@@ -16,38 +20,62 @@
 		{
 			"enText": "Russglish is a hybrid language of English and Russian.",
 			"ruText": "Руссглиш — гибридный язык английского и русского.",
-			"tokens": [
+			"phrases": [
 				{
-					"entry": "russglIX",
+					"tokens": [
+						{
+							"entry": "russglIX",
+							"after": " —"
+						}
+					],
 					"refEn": ["Russglish", 0],
-					"refRu": ["Руссглиш", 0],
-					"after": " —"
+					"refRu": ["Руссглиш", 0]
 				},
 				{
-					"entry": "inglIX",
+					"tokens": [
+						{
+							"entry": "inglIX"
+						}
+					],
 					"refEn": ["English", 0],
 					"refRu": ["английского", 0]
 				},
 				{
-					"entry": "plus",
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
 					"refEn": ["and", 0],
 					"refRu": ["и", 0]
 				},
 				{
-					"entry": "russki",
+					"tokens": [
+						{
+							"entry": "russki"
+						}
+					],
 					"refEn": ["Russian", 0],
 					"refRu": ["русского", 0]
 				},
 				{
-					"entry": "HYbrId",
+					"tokens": [
+						{
+							"entry": "HYbrId"
+						}
+					],
 					"refEn": ["hybrid", 0],
 					"refRu": ["гибридный", 0]
 				},
 				{
-					"entry": "dYal'ekt",
+					"tokens": [
+						{
+							"entry": "dYal'ekt",
+							"after": "."
+						}
+					],
 					"refEn": ["language", 0],
-					"refRu": ["язык", 0],
-					"after": "."
+					"refRu": ["язык", 0]
 				}
 			]
 		}

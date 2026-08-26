@@ -4,39 +4,67 @@
 	"title": {
 		"enText": "Three little pigs and the big bad wolf",
 		"ruText": "Три маленькие свиньи и большой злой волк",
-		"tokens": [
+		"phrases": [
 			{
-				"entry": "Tri",
+				"tokens": [
+					{
+						"entry": "Tri"
+					}
+				],
 				"refEn": ["Three", 0],
 				"refRu": ["Три", 0]
 			},
 			{
-				"entry": "mIni",
+				"tokens": [
+					{
+						"entry": "mIni"
+					}
+				],
 				"refEn": ["little", 0],
 				"refRu": ["маленькие", 0]
 			},
 			{
-				"entry": "swYn",
+				"tokens": [
+					{
+						"entry": "swYn"
+					}
+				],
 				"refEn": ["pigs", 0],
 				"refRu": ["свиньи", 0]
 			},
 			{
-				"entry": "plus",
+				"tokens": [
+					{
+						"entry": "plus"
+					}
+				],
 				"refEn": ["and", 0],
 				"refRu": ["и", 0]
 			},
 			{
-				"entry": "mega",
+				"tokens": [
+					{
+						"entry": "mega"
+					}
+				],
 				"refEn": ["big", 0],
 				"refRu": ["большой", 0]
 			},
 			{
-				"entry": "hulIg'an",
+				"tokens": [
+					{
+						"entry": "hulIg'an"
+					}
+				],
 				"refEn": ["bad", 0],
 				"refRu": ["злой", 0]
 			},
 			{
-				"entry": "wolk",
+				"tokens": [
+					{
+						"entry": "wolk"
+					}
+				],
 				"refEn": ["wolf", 0],
 				"refRu": ["волк", 0]
 			}

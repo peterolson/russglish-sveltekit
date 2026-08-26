@@ -27,7 +27,7 @@ export const UI = {
 	gloss: ['defInIciE'],
 	source: ["res'urs"],
 	partOfSpeech: ['klAss'],
-	derivation: ['derivaciE'],
+	derivation: ['derivAciE'],
 	borrowedFrom: ['Import'],
 	sense: ["sem'antika"],
 	builtFrom: ["kompon'ent"],
