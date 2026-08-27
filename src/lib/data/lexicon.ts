@@ -9,7 +9,8 @@ import { romanizeNeutral } from '$lib/phonology/romanize';
 
 // Which phoneme to pick when the two languages disagree about a vowel is a
 // per-word decision; the rules the lexicon follows are in
-// ../phonology/vowels.md.
+// ../phonology/vowels.md. The grammatical decisions — how a language with almost
+// no shared closed class builds a sentence — are in ./grammar.md.
 //
 // A lexicon entry plus its reading form and its pronunciation. There is only
 // ONE `ipa` field because convergence is the whole point: the three orthographies
@@ -93,15 +94,37 @@ export function entryFor(entry: string): DecodedEntry | undefined {
 
 const unstressed = (p: Pron): Pron => p.map((t) => (t.startsWith('ˈ') ? t.slice(1) : t));
 
+// Morphemes do not always simply abut. A stop is absorbed by the homorganic
+// affricate that follows it, which is what lets colléct + -tion be collécтion
+// rather than *collect-tion: /t/ + /ts/ is just /ts/, the stop already being the
+// affricate's own onset. Latin did this before either parent borrowed it —
+// collect- + -io gave collectio — so the rule is inherited, not invented.
+//
+// Keyed by the preceding phoneme; the value is the affricate that swallows it.
+const ABSORBED_BY: Record<string, string> = { t: 'ts', d: 'dʒ' };
+
+/** Run morphemes together, applying boundary sandhi. */
+function joinMorphemes(parts: Pron[]): Pron {
+	const out: string[] = [];
+	for (const part of parts) {
+		const last = out[out.length - 1];
+		if (last !== undefined && part[0] !== undefined && ABSORBED_BY[last] === part[0]) out.pop();
+		out.push(...part);
+	}
+	return out;
+}
+
 for (const e of lexicon) {
 	if (!e.derivedFrom?.length) continue;
-	const joined = e.derivedFrom.flatMap((key) => {
-		const part = byEntry.get(key);
-		if (!part) {
-			throw new Error(`${e.entry} is derived from "${key}", which is not in the lexicon`);
-		}
-		return unstressed(decodeNeutral(part.entry));
-	});
+	const joined = joinMorphemes(
+		e.derivedFrom.map((key) => {
+			const part = byEntry.get(key);
+			if (!part) {
+				throw new Error(`${e.entry} is derived from "${key}", which is not in the lexicon`);
+			}
+			return unstressed(decodeNeutral(part.entry));
+		})
+	);
 	const whole = unstressed(decodeNeutral(e.entry));
 	if (joined.join(' ') !== whole.join(' ')) {
 		throw new Error(

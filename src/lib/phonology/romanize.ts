@@ -27,7 +27,7 @@ const ROMAN: Record<string, string> = {
 	Z: 'zh', // /ʐ/
 	S: 'ś', // /s̺/
 	T: 'th', // /t̪θ/
-	D: 'ṭ', // /t̪/
+	D: 'dt', // /t̪/
 	K: 'kh', // /kx/
 	G: 'ǧ', // /ɟ/
 	H: 'gh', // /ɦ/

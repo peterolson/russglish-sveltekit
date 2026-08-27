@@ -10,6 +10,8 @@
 // for an occurrence the sentence does not have, or two tokens claiming
 // overlapping stretches of the same source sentence are all build-time errors,
 // because a silently wrong alignment is invisible on the page.
+//
+// The grammar these texts are written in is documented in ./grammar.md.
 
 import { entryFor } from './lexicon';
 import type { DecodedEntry } from './lexicon';

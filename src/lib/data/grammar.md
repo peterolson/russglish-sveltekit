@@ -1,0 +1,193 @@
+# Grammar
+
+Russglish has almost no vocabulary in common between its two parents outside the
+Greek/Latin international stratum — the closed classes especially. English _the_,
+_of_, _that_, _was_ and Russian _который_, _был_, _его_ have no shared shape to
+converge on, and no amount of respelling will produce one.
+
+So the grammar does not translate the function words. It **replaces them with
+structure**: word order, punctuation, repetition, and a handful of particles that
+do converge. What follows is the record of those decisions, in the order a
+sentence uses them.
+
+Everything here is illustrated from `texts/bible/genesis/genesis-1.json`, which is
+where the rules were actually settled.
+
+---
+
+## No articles
+
+There is nothing to converge. English has three (_a_, _an_, _the_) and Russian has
+none, so Russglish has none.
+
+> `Start períod, Allah creativáte atmosphera plus planet.`
+> _In the beginning God created the heaven and the earth._
+
+## No inflection
+
+Nouns do not decline or take a plural; verbs do not conjugate or take a tense.
+A word is one shape everywhere.
+
+> `Y fundamént go separáte woda ex woda.`
+> _and let it divide the waters from the waters_
+
+`woda` is both _water_ and _waters_ — and both _воду_ (accusative) and _воды_
+(genitive), which is the same sentence asking Russian for two different endings.
+Number and case are read from context, as they are in English for _sheep_ or
+_fish_.
+
+Tense is likewise unmarked. `Allah declaráte` is _God said_, not _God says_; the
+narrative is past because the text is a narrative.
+
+## The em dash is the copula
+
+Russglish has no verb "to be" in a linking sense. A dash joins subject to
+predicate, in any tense.
+
+> `Planet — null forma.` — _the earth was without form_
+> `Illumination — tip-top.` — _the light was good_
+> `Obscuration — super vácuum.` — _darkness was upon the deep_
+
+This is the one device both parents already own. Russian **writes** exactly this
+dash where it drops the present-tense copula (_Москва — столица_), and an English
+reader takes a dash as apposition and supplies the _is_ without being asked.
+
+## `start` is the existential
+
+The same word does _to begin_ and _to come to be_, which lets a fiat and its
+fulfilment use one verb.
+
+> `Go start illumination. Y illumination start.`
+> _Let there be light: and there was light._
+
+## `go` — the irrealis particle
+
+`go` marks a verb as commanded, permitted or wished rather than reported. It is
+**preverbal**, not clause-initial: it sits against the verb it governs, and where
+there is an explicit subject, the subject leads.
+
+> `Go start fundamént inter woda.` — no subject, so the particle opens the clause
+> `Y fundamént go separáte woda ex woda.` — subject first, particle against its verb
+
+Dropping `go` is what makes the thing happen. That is the whole of Russglish mood:
+the fiat and its fulfilment are the same words, and only the particle differs.
+
+## Repetition where a pronoun would go
+
+Russglish has no pronouns and no demonstratives — none converge. Where a source
+uses one, the noun is simply said again.
+
+> `Y Allah visualáte illumination; illumination — tip-top.`
+> _And God saw the light, that it was good._
+
+The semicolon carries the subordination that _that_ would have carried. This costs
+less than it looks like it should, because the repeated noun is usually only a word
+or two from its antecedent.
+
+## `y` and `plus` are not the same "and"
+
+Both mean _and_; they are not interchangeable.
+
+|        | joins                  |                     |      |
+| ------ | ---------------------- | ------------------- | ---- |
+| `y`    | clauses, sequentially  | _and then_          | и    |
+| `plus` | terms, within a clause | logical conjunction | плюс |
+
+> `Y dayn-finále plus dayn-stárt — premiér dayn.`
+> _And the evening and the morning were the first day._
+
+The first _and_ opens a new clause and is `y`; the second joins two nouns inside
+one and is `plus`. English spells both _and_ and cannot tell them apart.
+
+## Prepositions
+
+The ones that converge are Latin, and they are few:
+
+|         |                          |                    |
+| ------- | ------------------------ | ------------------ |
+| `ex`    | from, out of             | separation, source |
+| `super` | above, over, upon        |                    |
+| `inter` | between, in the midst of |                    |
+
+Where none fits, the relation goes to punctuation or to word order instead.
+
+## Punctuated offsets, not coordination
+
+Where a source strings clauses together, Russglish prefers to stop.
+
+> `Planet — null forma; vacuum.`
+> _the earth was without form, and void_
+
+`plus` was rejected here: it is a logical connective joining terms, and pressing it
+into service as discourse glue blurs the one distinction that makes it worth
+having.
+
+## Hyphenated compounds
+
+Where no single word converges, two are joined. The hyphen is not decorative —
+`decodeNeutral` gives each half its own stress domain, and `lexicon.ts` checks by
+concatenation that the parts really do produce the whole.
+
+> `dayn-stárt` (day + start) — morning
+> `dayn-finále` (day + finale) — evening
+
+Both halves already existed for other reasons, which is the test of whether a
+compound is worth making.
+
+## Verbs come in two shapes
+
+A verb is either a **bare stem** or an **-At derivation**.
+
+> `start`, `colléct` — already verbs in both parents, taken as they stand
+> `creativáte`, `declaráte`, `separáte`, `nomencláte` — built with -ate/-ать
+
+The suffix earns its keep where the borrowed root is not itself a verb, or where a
+column needs the ending to show that it is one — Russian -ать, with its soft sign,
+makes verbhood visible in a way a bare stem cannot.
+
+Neither shape conjugates or carries tense; see **No inflection** above.
+
+## Discourse formulae
+
+The hardest words to converge are the emptiest ones. A phrase like _and it was so_
+/ _и стало так_ carries almost no content — it is the biblical _so yeah_, _that's
+that_ — and neither language's version has a shape the other could borrow.
+
+Where such a formula has an international equivalent, Russglish takes it whole
+rather than translating the parts:
+
+> `...separáte woda ex woda. Fact.`
+> _...divided the waters from the waters: and it was so._
+
+Both parents already use the bare noun this way: «Факт.» is _indeed, that is so_,
+and English _Fact._ stands alone the same way. Nothing is calqued; the formula is
+replaced by a formula that does the same job.
+
+## Word order: head-final, except for infix operators
+
+The default is **head-final** — what modifies comes before what it modifies.
+
+> `premiér dayn` — first day
+> `null forma` — without form
+> `dayn-stárt` — the day's start, morning
+> `sub fundamént woda` — the water under the firmament
+
+The exceptions are **operators, which sit between their operands**:
+
+|              | between               |                           |
+| ------------ | --------------------- | ------------------------- |
+| verbs        | subject and object    | `Allah creativáte planet` |
+| conjunctions | conjuncts             | `atmosphera plus planet`  |
+| the dash     | subject and predicate | `illumination — tip-top`  |
+
+Prepositions are a third case: prefix operators, taking the noun after them. The
+phrase they build is then head-final against its own head — `[sub fundamént] woda`.
+
+Being head-final is what lets the language shed relative clauses, which is worth
+more than it sounds. Verse 7 needs _the waters which were under the firmament_ and
+_воду, которая под твердью_ — a relative pronoun and a copula that neither parent
+shares — and says `sub fundamént woda` instead, with no subordination at all.
+
+A fiat has no subject, so its verb comes first by default rather than by rule (see
+`go` above). Both parents allow verb-initial imperatives (_Let there be_, _да
+будет_), so that order is native to neither speaker and strange to neither.

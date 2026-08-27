@@ -77,7 +77,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "planet",
+							"entry": "terra",
 							"after": "."
 						}
 					],
@@ -94,7 +94,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "planet",
+							"entry": "terra",
 							"after": " —"
 						}
 					],
@@ -145,7 +145,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "mrk",
+							"entry": "obskurAciE",
 							"after": " —"
 						}
 					],
@@ -264,16 +264,6 @@
 				{
 					"tokens": [
 						{
-							"entry": "foton",
-							"after": ","
-						}
-					],
-					"refEn": ["light", 0],
-					"refRu": ["свет", 0]
-				},
-				{
-					"tokens": [
-						{
 							"entry": "go"
 						}
 					],
@@ -283,12 +273,21 @@
 				{
 					"tokens": [
 						{
-							"entry": "start",
-							"after": "!"
+							"entry": "start"
 						}
 					],
 					"refEn": ["there be", 0],
 					"refRu": ["будет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAciE",
+							"after": "."
+						}
+					],
+					"refEn": ["light", 0],
+					"refRu": ["свет", 0]
 				},
 				{
 					"tokens": [
@@ -302,7 +301,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "foton"
+							"entry": "IlumInAciE"
 						}
 					],
 					"refEn": ["light", 1],
@@ -355,12 +354,87 @@
 				{
 					"tokens": [
 						{
-							"entry": "foton",
-							"after": "."
+							"entry": "IlumInAciE",
+							"after": ";"
 						}
 					],
 					"refEn": ["light", 0],
 					"refRu": ["свет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAciE",
+							"after": " —"
+						}
+					],
+					"refEn": ["it", 0],
+					"refRu": ["он", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tIp-top",
+							"after": "."
+						}
+					],
+					"refEn": ["good", 0],
+					"refRu": ["хорош", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 1],
+					"refRu": ["Бог", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "separ'At"
+						}
+					],
+					"refEn": ["divided", 0],
+					"refRu": ["отделил", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAciE"
+						}
+					],
+					"refEn": ["light", 1],
+					"refRu": ["свет", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "eks"
+						}
+					],
+					"refEn": ["from", 0],
+					"refRu": ["от", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "obskurAciE",
+							"after": "."
+						}
+					],
+					"refEn": ["darkness", 0],
+					"refRu": ["тьмы", 0]
 				}
 			]
 		},
@@ -368,37 +442,816 @@
 			"label": "5",
 			"enText": "And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
 			"ruText": "И назвал Бог свет днём, а тьму ночью. И был вечер, и было утро: день один.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nomenkl'At"
+						}
+					],
+					"refEn": ["called", 0],
+					"refRu": ["назвал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAciE",
+							"after": " —"
+						}
+					],
+					"refEn": ["light", 0],
+					"refRu": ["свет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": ","
+						}
+					],
+					"refEn": ["Day", 0],
+					"refRu": ["днём", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["а", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "obskurAciE",
+							"after": " —"
+						}
+					],
+					"refEn": ["darkness", 0],
+					"refRu": ["тьму", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nokt",
+							"after": "."
+						}
+					],
+					"refEn": ["Night", 0],
+					"refRu": ["ночью", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 1],
+					"refRu": ["И", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den-fYn'al"
+						}
+					],
+					"refEn": ["evening", 0],
+					"refRu": ["вечер", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den-st'art",
+							"after": " —"
+						}
+					],
+					"refEn": ["morning", 0],
+					"refRu": ["утро", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "prem'yir"
+						}
+					],
+					"refEn": ["first", 0],
+					"refRu": ["один", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": "."
+						}
+					],
+					"refEn": ["day", 0],
+					"refRu": ["день", 0]
+				}
+			]
 		},
 		{
 			"label": "6",
 			"enText": "And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.",
 			"ruText": "И сказал Бог: да будет твердь посреди воды, и да отделяет она воду от воды.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ":"
+						}
+					],
+					"refEn": ["said", 0],
+					"refRu": ["сказал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["Let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "start"
+						}
+					],
+					"refEn": ["there be", 0],
+					"refRu": ["будет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent"
+						}
+					],
+					"refEn": ["firmament", 0],
+					"refRu": ["твердь", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Intr"
+						}
+					],
+					"refEn": ["in the midst of", 0],
+					"refRu": ["посреди", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa",
+							"after": "."
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["воды", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent"
+						}
+					],
+					"refEn": ["it", 0],
+					"refRu": ["она", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["let", 0],
+					"refRu": ["да", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "separ'At"
+						}
+					],
+					"refEn": ["divide", 0],
+					"refRu": ["отделяет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa"
+						}
+					],
+					"refEn": ["waters", 1],
+					"refRu": ["воду", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "eks"
+						}
+					],
+					"refEn": ["from", 0],
+					"refRu": ["от", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa",
+							"after": "."
+						}
+					],
+					"refEn": ["waters", 2],
+					"refRu": ["воды", 1]
+				}
+			]
 		},
 		{
 			"label": "7",
 			"enText": "And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.",
 			"ruText": "И создал Бог твердь, и отделил воду, которая под твердью, от воды, которая над твердью. И стало так.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kreAtIv'At"
+						}
+					],
+					"refEn": ["made", 0],
+					"refRu": ["создал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent",
+							"after": ","
+						}
+					],
+					"refEn": ["firmament", 0],
+					"refRu": ["твердь", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "separ'At"
+						}
+					],
+					"refEn": ["divided", 0],
+					"refRu": ["отделил", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sub"
+						}
+					],
+					"refEn": ["under", 0],
+					"refRu": ["под", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent"
+						}
+					],
+					"refEn": ["firmament", 1],
+					"refRu": ["твердью", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa"
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["воду", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "eks"
+						}
+					],
+					"refEn": ["from", 0],
+					"refRu": ["от", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["above", 0],
+					"refRu": ["над", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent"
+						}
+					],
+					"refEn": ["firmament", 2],
+					"refRu": ["твердью", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa",
+							"after": "."
+						}
+					],
+					"refEn": ["waters", 1],
+					"refRu": ["воды", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fAkt",
+							"after": "."
+						}
+					],
+					"refEn": ["and it was so", 0],
+					"refRu": ["И стало так", 0]
+				}
+			]
 		},
 		{
 			"label": "8",
 			"enText": "And God called the firmament Heaven. And the evening and the morning were the second day.",
 			"ruText": "И назвал Бог твердь небом. И был вечер, и было утро: день второй.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nomenkl'At"
+						}
+					],
+					"refEn": ["called", 0],
+					"refRu": ["назвал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundam'ent",
+							"after": " —"
+						}
+					],
+					"refEn": ["firmament", 0],
+					"refRu": ["твердь", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera",
+							"after": "."
+						}
+					],
+					"refEn": ["Heaven", 0],
+					"refRu": ["небом", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 1],
+					"refRu": ["И", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den-fYn'al"
+						}
+					],
+					"refEn": ["evening", 0],
+					"refRu": ["вечер", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den-st'art",
+							"after": " —"
+						}
+					],
+					"refEn": ["morning", 0],
+					"refRu": ["утро", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sekond"
+						}
+					],
+					"refEn": ["second", 0],
+					"refRu": ["второй", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": "."
+						}
+					],
+					"refEn": ["day", 0],
+					"refRu": ["день", 0]
+				}
+			]
 		},
 		{
 			"label": "9",
 			"enText": "And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.",
 			"ruText": "И сказал Бог: да соберётся вода, которая под небом, в одно место, и да явится суша. И стало так.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ":"
+						}
+					],
+					"refEn": ["said", 0],
+					"refRu": ["сказал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sub"
+						}
+					],
+					"refEn": ["under", 0],
+					"refRu": ["под", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera"
+						}
+					],
+					"refEn": ["the heaven", 0],
+					"refRu": ["небом", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa"
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["вода", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["Let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kol'ekt"
+						}
+					],
+					"refEn": ["be gathered together", 0],
+					"refRu": ["соберётся", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "In"
+						}
+					],
+					"refEn": ["unto", 0],
+					"refRu": ["в", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mono"
+						}
+					],
+					"refEn": ["one", 0],
+					"refRu": ["одно", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "lok'AciE",
+							"after": ","
+						}
+					],
+					"refEn": ["place", 0],
+					"refRu": ["место", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kontIn'ent"
+						}
+					],
+					"refEn": ["the dry land", 0],
+					"refRu": ["суша", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["let", 0],
+					"refRu": ["да", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "materIalIz'At",
+							"after": "."
+						}
+					],
+					"refEn": ["appear", 0],
+					"refRu": ["явится", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fAkt",
+							"after": "."
+						}
+					],
+					"refEn": ["and it was so", 0],
+					"refRu": ["И стало так", 0]
+				}
+			]
 		},
 		{
 			"label": "10",
 			"enText": "And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.",
 			"ruText": "И назвал Бог сушу землёю, а собрание вод назвал морями. И увидел Бог, что это хорошо.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nomenkl'At"
+						}
+					],
+					"refEn": ["called", 0],
+					"refRu": ["назвал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kontIn'ent",
+							"after": " —"
+						}
+					],
+					"refEn": ["the dry land", 0],
+					"refRu": ["сушу", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"after": ","
+						}
+					],
+					"refEn": ["Earth", 0],
+					"refRu": ["землёю", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["а", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kol'ekciE"
+						}
+					],
+					"refEn": ["the gathering together", 0],
+					"refRu": ["собрание", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa",
+							"after": " —"
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["вод", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "oke'an",
+							"after": "."
+						}
+					],
+					"refEn": ["Seas", 0],
+					"refRu": ["морями", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["И", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 1],
+					"refRu": ["Бог", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "vIzual'At",
+							"after": ";"
+						}
+					],
+					"refEn": ["saw", 0],
+					"refRu": ["увидел", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tIp-top",
+							"after": "."
+						}
+					],
+					"refEn": ["that it was good", 0],
+					"refRu": ["что это хорошо", 0]
+				}
+			]
 		},
 		{
 			"label": "11",

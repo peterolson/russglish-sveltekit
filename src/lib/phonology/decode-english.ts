@@ -12,7 +12,7 @@
 // Casual readers skip the marks; the decoder reads them.
 
 import { placeStress, DENTAL_T, type Pron } from './ipa.ts';
-import { DOT, UMAC, ACUTE } from './marks.ts';
+import { DOT, UMAC, ACUTE, DIAERESIS } from './marks.ts';
 
 const VOWEL_LETTERS = new Set(['a', 'e', 'i', 'o', 'u']);
 const isVowelLetter = (c: string | undefined) => !!c && VOWEL_LETTERS.has(c);
@@ -146,6 +146,14 @@ export function decodeEnglish(word: string): Pron {
 		// season, rose — and Russian writes them with ⟨з⟩, so without this the
 		// English column would have to respell (⟨vizual⟩) and lose the word. The
 		// underdot is already spoken for by [s̺], so /z/ takes the macron.
+		// ï → /j/, the consonantal ⟨i⟩ of million, onion, senior, premier. See
+		// marks.ts for why this one needs a mark rather than a rule.
+		if (c === 'i' && s[i + 1] === DIAERESIS) {
+			out.push('j');
+			i += 2;
+			continue;
+		}
+
 		if (c === 's' && s[i + 1] === UMAC) {
 			out.push('z');
 			i += 2;
@@ -311,7 +319,13 @@ export function decodeEnglish(word: string): Pron {
 			i += 1;
 			continue;
 		}
-		if (c === 'n' && ['k', 'g'].includes(s[i + 1])) {
+		// n → ŋ before a velar. ⟨c⟩ counts when it is the /k/ one — before a, o, u or
+		// a consonant — and not when it is the /ts/ one, using the same test the ⟨c⟩
+		// rule below uses. So ⟨nomenclate⟩ is /ŋ/, matching Russian ⟨нк⟩, while
+		// ⟨dance⟩ and ⟨prince⟩ keep their /n/.
+		const velarNext =
+			['k', 'g'].includes(s[i + 1]) || (s[i + 1] === 'c' && !['e', 'i', 'y'].includes(s[i + 2]));
+		if (c === 'n' && velarNext) {
 			out.push('ŋ');
 			i += 1;
 			continue;
