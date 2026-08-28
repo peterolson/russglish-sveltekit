@@ -28,6 +28,8 @@ export type Word = {
 	glossRu: string;
 	before: string;
 	after: string;
+	/** False when this word binds to the next with no space: self·type. */
+	space: boolean;
 };
 
 /** A run of source text, tagged with the phrase that claims it (or null). */
@@ -38,6 +40,25 @@ export type Piece = { text: string; phrase: number | null };
 // phantom woda." So capitalization tracks full stops rather than just the start.
 const ENDS_SENTENCE = /[.!?…]["')\]]*\s*$/;
 
+// Direct speech opens a sentence too, even where the verb before it ends with no
+// stop: Allah declarate «Terra go prodúctate…». Both parents capitalize there.
+const OPENS_QUOTE = /[«"'([]$/;
+
+// Russglish has two joiners and they are not the same thing.
+//
+// The INTERPUNCT of dayn·stá̱rt or tip·top makes a WORD. It is a lexical compound with
+// its own entry, and the hyphen is phonologically load-bearing: decodeNeutral
+// gives each half its own stress domain, and lexicon.ts checks that the halves
+// really do run together into the whole.
+//
+// The HYPHEN of self-type makes a PHRASE. Several words act as one modifier,
+// which head-finality alone leaves ambiguous once three nouns stack up. It is a
+// parsing aid only — separate words already have separate stress domains — so
+// unlike the hyphen it changes no phonology and earns no lexicon entry. The
+// composition stays visible on the page, which is the point: nothing is being
+// claimed as a new word.
+export const GROUP = '-';
+
 export function words(sentence: Sentence, orthography: Orthography): Word[] {
 	const out: Word[] = [];
 	let opensSentence = true;
@@ -47,7 +68,7 @@ export function words(sentence: Sentence, orthography: Orthography): Word[] {
 			const entry = lookup(token.entry);
 			const proper = entry.partOfSpeech.includes('proper noun');
 			const form = formOf(entry, orthography);
-			const capital = opensSentence || proper;
+			const capital = opensSentence || proper || OPENS_QUOTE.test(token.before ?? '');
 			opensSentence = ENDS_SENTENCE.test(token.after ?? '');
 			out.push({
 				index: out.length,
@@ -59,7 +80,8 @@ export function words(sentence: Sentence, orthography: Orthography): Word[] {
 				glossEn: entry.glossEn,
 				glossRu: entry.glossRu,
 				before: token.before ?? '',
-				after: token.after ?? ''
+				after: token.after ?? '',
+				space: !(token.after ?? '').endsWith(GROUP)
 			});
 		}
 	});
@@ -74,8 +96,9 @@ export function words(sentence: Sentence, orthography: Orthography): Word[] {
  */
 export function line(sentence: Sentence, orthography: Orthography): string {
 	return words(sentence, orthography)
-		.map((word) => `${word.before}${word.form}${word.after}`)
-		.join(' ');
+		.map((word) => `${word.before}${word.form}${word.after}${word.space ? ' ' : ''}`)
+		.join('')
+		.trimEnd();
 }
 
 /**

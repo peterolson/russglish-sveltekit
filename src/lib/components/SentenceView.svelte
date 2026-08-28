@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import type { Sentence } from '$lib/data/schema.types';
 	import { pieces, words } from '$lib/text/render';
-	import { labels, useOrthography } from '$lib/ui/labels.svelte';
+	import { labels, useOrthography, useSources } from '$lib/ui/labels.svelte';
 
 	type Props = { sentence: Sentence; heading?: boolean };
 	let { sentence, heading = false }: Props = $props();
@@ -13,6 +13,7 @@
 	let active = $state<number | null>(null);
 
 	const orthography = useOrthography();
+	const sources = useSources();
 	const t = labels();
 	const line = $derived(words(sentence, orthography.current));
 	const en = $derived(pieces(sentence, 'en'));
@@ -39,22 +40,26 @@
 				onmouseleave={() => (active = null)}
 				onfocus={() => (active = word.index)}
 				onblur={() => (active = null)}>{word.form}</button
-			>{word.after + ' '}{/each}
+			>{word.after + (word.space ? ' ' : '')}{/each}
 	</p>
 
-	<p class="source ortho" lang="en">
-		{#each en as piece, i (i)}<span
-				class="piece"
-				class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
-			>{/each}
-	</p>
+	{#if sources.en}
+		<p class="source ortho" lang="en">
+			{#each en as piece, i (i)}<span
+					class="piece"
+					class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
+				>{/each}
+		</p>
+	{/if}
 
-	<p class="source ortho" lang="ru">
-		{#each ru as piece, i (i)}<span
-				class="piece"
-				class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
-			>{/each}
-	</p>
+	{#if sources.ru}
+		<p class="source ortho" lang="ru">
+			{#each ru as piece, i (i)}<span
+					class="piece"
+					class:active={piece.phrase !== null && piece.phrase === lit}>{piece.text}</span
+				>{/each}
+		</p>
+	{/if}
 
 	<p class="gloss" aria-live="polite">
 		{#if shown}

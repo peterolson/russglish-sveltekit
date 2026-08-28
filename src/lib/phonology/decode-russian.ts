@@ -12,7 +12,7 @@
 // English reader — to prevent a Russian confusion that does not arise.
 
 import { placeStress, DENTAL_T, type Pron } from './ipa.ts';
-import { DOT, UMAC, ACUTE } from './marks.ts';
+import { DOT, UMAC, ACUTE, COMPOUND } from './marks.ts';
 
 const CONS: Record<string, string> = {
 	б: 'b',
@@ -66,8 +66,8 @@ const UMAC_ALT: Record<string, string> = { г: 'ɦ', и: 'əi' };
 const isVowelChar = (c: string) => c in VOW;
 
 export function decodeRussian(word: string): Pron {
-	// hyphenated compound: each part is its own stress domain (decode separately)
-	if (word.includes('-')) return word.split('-').filter(Boolean).flatMap(decodeRussian);
+	// compound: each part is its own stress domain (decode separately)
+	if (word.includes(COMPOUND)) return word.split(COMPOUND).filter(Boolean).flatMap(decodeRussian);
 	const s = word.toLowerCase();
 	const n = s.length;
 	const out: Pron = [];
@@ -79,7 +79,7 @@ export function decodeRussian(word: string): Pron {
 		const c = s[i];
 		const rest = s.slice(i);
 
-		if (c === '-' || c === ' ' || c === ACUTE) {
+		if (c === COMPOUND || c === ' ' || c === ACUTE) {
 			i += 1;
 			prevWasVowel = false;
 			continue;

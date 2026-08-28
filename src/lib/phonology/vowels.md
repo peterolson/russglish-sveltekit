@@ -98,5 +98,11 @@ an exception. Two conventions:
   `deklAr'At`. Left unstressed the verb sounds like its root with something
   trailing off the end.
 
+  **Except where the root is a noun the reader already knows.** `sp'ermAt`,
+  `fr'uktAt` and `prod'uktAt` keep the beat of спе́рма, фру́кт and проду́кт rather
+  than moving it onto the suffix. Standing next to its own noun — `spérmAt spérma`,
+  the cognate accusative of Genesis 1:11 — the shared stress is what makes the pair
+  audible as a pair.
+
 Where the shape of a word is already Russian, the stress may lean English to
 balance it — `woDa` is /ˈwot̪a/ (WAter) not /woˈt̪a/ (вода́).

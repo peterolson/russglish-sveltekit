@@ -71,6 +71,29 @@ export class OrthographyState {
 	}
 }
 
+const SOURCES = Symbol('sources');
+
+/**
+ * Whether the source texts are on show. Russglish ALONE by default: the page is
+ * meant to be read, and a reader who can see the English sitting under it will
+ * read the English instead. The sources are reference, available on request.
+ *
+ * Not a cookie, unlike the orthography — the server does not need to know, since
+ * hidden is what it renders either way and revealing is a client-side act.
+ */
+export class SourcesState {
+	en = $state(false);
+	ru = $state(false);
+}
+
+export function provideSources(): SourcesState {
+	return setContext(SOURCES, new SourcesState());
+}
+
+export function useSources(): SourcesState {
+	return getContext<SourcesState>(SOURCES);
+}
+
 export function provideOrthography(initial: Orthography): OrthographyState {
 	return setContext(KEY, new OrthographyState(initial));
 }

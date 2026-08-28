@@ -1,4 +1,4 @@
-import { ACUTE } from './marks.ts';
+import { ACUTE, COMPOUND } from './marks.ts';
 
 const ROMAN: Record<string, string> = {
 	// plain consonants
@@ -54,7 +54,7 @@ export function romanizeNeutral(neutral: string): string {
 			stressNext = true; // marks the NEXT vowel, which may be past an onset cluster
 			continue;
 		}
-		if (ch === '-' || ch === ' ') {
+		if (ch === COMPOUND || ch === ' ') {
 			out += ch;
 			continue;
 		}

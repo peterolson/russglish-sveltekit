@@ -3,7 +3,7 @@ import { decodeRussian } from '$lib/phonology/decode-russian';
 import { decodeEnglish } from '$lib/phonology/decode-english';
 import _lexicon from './lexicon.json';
 import type { LexiconEntry } from './schema.types';
-import { prettyIPA, type Pron } from '$lib/phonology/ipa';
+import { isConsonant, prettyIPA, type Phoneme, type Pron } from '$lib/phonology/ipa';
 import { englishEar, russianEar } from '$lib/phonology/projections';
 import { romanizeNeutral } from '$lib/phonology/romanize';
 
@@ -103,12 +103,22 @@ const unstressed = (p: Pron): Pron => p.map((t) => (t.startsWith('ˈ') ? t.slice
 // Keyed by the preceding phoneme; the value is the affricate that swallows it.
 const ABSORBED_BY: Record<string, string> = { t: 'ts', d: 'dʒ' };
 
+// The second boundary rule: HIATUS. A stem-final vowel drops before a suffix that
+// begins with one — sperma + -At is spermAt, not *spermaAt — because two vowels
+// will not share a syllable and the suffix is the one that carries the stress.
+// Both parents do this wherever they derive at all (тема → тематический).
+const isVowel = (t: Phoneme): boolean => !isConsonant(t) && t !== 'ə̃';
+
 /** Run morphemes together, applying boundary sandhi. */
 function joinMorphemes(parts: Pron[]): Pron {
 	const out: string[] = [];
 	for (const part of parts) {
 		const last = out[out.length - 1];
-		if (last !== undefined && part[0] !== undefined && ABSORBED_BY[last] === part[0]) out.pop();
+		const next = part[0];
+		if (last !== undefined && next !== undefined) {
+			if (ABSORBED_BY[last] === next) out.pop();
+			else if (isVowel(last) && isVowel(next)) out.pop();
+		}
 		out.push(...part);
 	}
 	return out;

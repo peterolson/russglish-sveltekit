@@ -1,9 +1,10 @@
 <script lang="ts">
 	import SentenceView from './SentenceView.svelte';
 	import type { Text } from '$lib/data/schema.types';
-	import { labels } from '$lib/ui/labels.svelte';
+	import { labels, useSources } from '$lib/ui/labels.svelte';
 
 	const t = labels();
+	const sources = useSources();
 
 	type Props = { text: Text };
 	let { text }: Props = $props();
@@ -19,6 +20,23 @@
 		{#if text.sentences.length > 1}
 			<p class="progress">{done} / {text.sentences.length}</p>
 		{/if}
+
+		{#if text.sentences.length}
+			<!-- Each switch is written in the language it reveals, not in Russglish and
+			     not in the other one. It is addressed to a reader who wants that
+			     language, and it is the one thing on the page that has to be legible
+			     before you can read anything else. -->
+			<div class="sources">
+				<label lang="en">
+					<input type="checkbox" bind:checked={sources.en} />
+					Show English translation
+				</label>
+				<label lang="ru">
+					<input type="checkbox" bind:checked={sources.ru} />
+					Показать русский перевод
+				</label>
+			</div>
+		{/if}
 	</header>
 
 	{#if text.sentences.length}
@@ -33,6 +51,32 @@
 </article>
 
 <style>
+	.sources {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.25rem;
+		margin-top: 0.9rem;
+	}
+
+	.sources label {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: var(--ink-faint);
+		font-size: 0.8rem;
+		cursor: pointer;
+	}
+
+	.sources label:hover {
+		color: var(--ink-soft);
+	}
+
+	.sources input {
+		margin: 0;
+		accent-color: var(--accent);
+		cursor: pointer;
+	}
+
 	.progress {
 		margin: 0.5rem 0 0;
 		color: var(--ink-faint);

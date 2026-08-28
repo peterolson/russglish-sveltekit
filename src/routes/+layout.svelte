@@ -5,7 +5,7 @@
 	import { page } from '$app/state';
 	import { untrack } from 'svelte';
 	import ScriptPicker from '$lib/components/ScriptPicker.svelte';
-	import { labels, provideOrthography } from '$lib/ui/labels.svelte';
+	import { labels, provideOrthography, provideSources } from '$lib/ui/labels.svelte';
 	import type { LayoutProps } from './$types';
 
 	let { data, children }: LayoutProps = $props();
@@ -18,6 +18,7 @@
 	// picker owns the orthography, and re-reading data on every navigation would
 	// fight it — the cookie the picker writes is what the next load reads.
 	provideOrthography(untrack(() => data.orthography));
+	provideSources();
 	const t = labels();
 
 	const links = [

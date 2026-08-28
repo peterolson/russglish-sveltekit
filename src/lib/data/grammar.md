@@ -122,17 +122,61 @@ Where a source strings clauses together, Russglish prefers to stop.
 into service as discourse glue blurs the one distinction that makes it worth
 having.
 
-## Hyphenated compounds
+## Two joiners: the interpunct makes a word, the hyphen makes a phrase
 
-Where no single word converges, two are joined. The hyphen is not decorative —
-`decodeNeutral` gives each half its own stress domain, and `lexicon.ts` checks by
-concatenation that the parts really do produce the whole.
+### `·` — lexical compound
 
-> `dayn-stárt` (day + start) — morning
-> `dayn-finále` (day + finale) — evening
+Where no single word converges, two are joined into a new one. The interpunct is
+not decorative: `decodeNeutral` gives each half its own stress domain, and
+`lexicon.ts` checks by concatenation that the parts really do produce the whole.
+
+> `dayn·stárt` (day + start) — morning
+> `dayn·finále` (day + finale) — evening
+> `tip·top` — good, in order
 
 Both halves already existed for other reasons, which is the test of whether a
-compound is worth making.
+compound is worth making. A compound is a **headword**: its own lexicon entry, its
+own gloss, and a `derivedFrom` the checker verifies.
+
+### `-` — syntactic group
+
+Several ordinary words acting as **one modifier**. Head-finality alone leaves this
+ambiguous once three nouns stack up — `self type frukt` could bracket either way —
+so the hyphen binds the ones that go together.
+
+> `frúctate self-type frukt` — yielding fruit after its own kind
+
+It is a parsing aid and nothing more. Separate words already have separate stress
+domains, so unlike the interpunct it changes no phonology, and it earns **no
+lexicon entry**: `self-type` is `self` + `tYp`, both already headwords, and the
+composition stays visible on the page.
+
+### The hyphen separates adjectival from adverbial
+
+Because only NOMINAL modifiers are head-final — verbs are infix operators, see
+below — binding a prepositional phrase says it modifies the noun after it, and
+leaving it loose says it modifies the verb. The mark is the only thing carrying
+that distinction, in a language with neither cases nor relative pronouns.
+
+|                      |            |                                 |
+| -------------------- | ---------- | ------------------------------- |
+| `inter woda`         | adverbial  | where the firmament comes to be |
+| `sub-fundamént woda` | adjectival | which waters are meant          |
+
+Genesis 1:6 and 1:7 need it in consecutive verses. In 6 the firmament does not yet
+exist — יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם, _let there be a firmament in the midst of the
+waters_ — and a thing cannot be described as "the between-the-waters firmament"
+before there is one to describe. The phrase is part of what is commanded.
+
+By 7 it exists, and _the waters which were under the firmament_ picks out which
+waters are meant from a referent already in hand. Same preposition, same nouns,
+different work — and only the hyphen shows it.
+
+### Why round this way
+
+The interpunct is the narrower mark, so a compound sits tighter on the page than a
+phrase does — which is what it is, one word rather than several read together. A
+hyphen says _read these together_; an interpunct says _this is one word_.
 
 ## Verbs come in two shapes
 

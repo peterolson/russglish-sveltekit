@@ -1,9 +1,9 @@
 // The ordinal precision-layer combining marks (see orthography.md), as explicit
 // codepoints so every module agrees on the exact character.
-export const DOT = "̣"; // combining dot below  → "non-default reading" (alt-1)
-export const UMAC = "̱"; // combining macron below → alt-2
+export const DOT = '̣'; // combining dot below  → "non-default reading" (alt-1)
+export const UMAC = '̱'; // combining macron below → alt-2
 
-export const ACUTE = "́"; // combining acute = stress (on the stressed vowel)
+export const ACUTE = '́'; // combining acute = stress (on the stressed vowel)
 
 // The one mark that goes ABOVE rather than below. English ⟨i⟩ before a vowel is
 // regularly the consonant /j/ — million, onion, senior, brilliant, premier — but
@@ -11,9 +11,18 @@ export const ACUTE = "́"; // combining acute = stress (on the stressed vowel)
 // apart and it takes a mark. A diaeresis already means "read this vowel on its
 // own", and marking it also blocks the ⟨ie⟩ digraph, which is what lets ⟨premier⟩
 // survive spelled as itself.
-export const DIAERESIS = "̈"; // combining diaeresis → consonantal ⟨ï⟩ = /j/
+export const DIAERESIS = '̈'; // combining diaeresis → consonantal ⟨ï⟩ = /j/
 
 // Convenience for building marked strings in data/tests.
+// The COMPOUND joiner. It marks a lexical compound — dayn·stá̱rt, tip·top — and is
+// phonologically real: each half is its own stress domain, decoded separately.
+//
+// The interpunct rather than the hyphen because it is narrower, and a compound
+// should read as one word. The hyphen does the other job, binding several ordinary
+// words into one modifier (self-type); see GROUP in text/render.ts. A hyphen says
+// "read these together", an interpunct says "this is one word".
+export const COMPOUND = '·';
+
 export const dot = (base: string) => base + DOT;
 export const umac = (base: string) => base + UMAC;
 export const ac = (base: string) => base + ACUTE; // stress mark

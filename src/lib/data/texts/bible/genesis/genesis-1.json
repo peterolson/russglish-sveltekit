@@ -255,7 +255,7 @@
 					"tokens": [
 						{
 							"entry": "deklAr'At",
-							"after": ":"
+							"after": ","
 						}
 					],
 					"refEn": ["said", 0],
@@ -264,7 +264,8 @@
 				{
 					"tokens": [
 						{
-							"entry": "go"
+							"entry": "go",
+							"before": "«"
 						}
 					],
 					"refEn": ["Let", 0],
@@ -283,7 +284,7 @@
 					"tokens": [
 						{
 							"entry": "IlumInAciE",
-							"after": "."
+							"after": "»."
 						}
 					],
 					"refEn": ["light", 0],
@@ -374,7 +375,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "tIp-top",
+							"entry": "tIp·top",
 							"after": "."
 						}
 					],
@@ -531,7 +532,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "den-fYn'al"
+							"entry": "den·fYn'al"
 						}
 					],
 					"refEn": ["evening", 0],
@@ -549,7 +550,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "den-st'art",
+							"entry": "den·st'art",
 							"after": " —"
 						}
 					],
@@ -604,7 +605,7 @@
 					"tokens": [
 						{
 							"entry": "deklAr'At",
-							"after": ":"
+							"after": ","
 						}
 					],
 					"refEn": ["said", 0],
@@ -613,7 +614,8 @@
 				{
 					"tokens": [
 						{
-							"entry": "go"
+							"entry": "go",
+							"before": "«"
 						}
 					],
 					"refEn": ["Let", 0],
@@ -631,7 +633,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "fundam'ent"
+							"entry": "fundament"
 						}
 					],
 					"refEn": ["firmament", 0],
@@ -668,7 +670,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "fundam'ent"
+							"entry": "fundament"
 						}
 					],
 					"refEn": ["it", 0],
@@ -714,7 +716,7 @@
 					"tokens": [
 						{
 							"entry": "woDa",
-							"after": "."
+							"after": "»."
 						}
 					],
 					"refEn": ["waters", 2],
@@ -757,7 +759,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "fundam'ent",
+							"entry": "fundament",
 							"after": ","
 						}
 					],
@@ -785,20 +787,15 @@
 				{
 					"tokens": [
 						{
-							"entry": "sub"
-						}
-					],
-					"refEn": ["under", 0],
-					"refRu": ["под", 0]
-				},
-				{
-					"tokens": [
+							"entry": "sub",
+							"after": "-"
+						},
 						{
-							"entry": "fundam'ent"
+							"entry": "fundament"
 						}
 					],
-					"refEn": ["firmament", 1],
-					"refRu": ["твердью", 0]
+					"refEn": ["under the firmament", 0],
+					"refRu": ["под твердью", 0]
 				},
 				{
 					"tokens": [
@@ -821,20 +818,15 @@
 				{
 					"tokens": [
 						{
-							"entry": "supr"
-						}
-					],
-					"refEn": ["above", 0],
-					"refRu": ["над", 0]
-				},
-				{
-					"tokens": [
+							"entry": "supr",
+							"after": "-"
+						},
 						{
-							"entry": "fundam'ent"
+							"entry": "fundament"
 						}
 					],
-					"refEn": ["firmament", 2],
-					"refRu": ["твердью", 1]
+					"refEn": ["above the firmament", 0],
+					"refRu": ["над твердью", 0]
 				},
 				{
 					"tokens": [
@@ -893,7 +885,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "fundam'ent",
+							"entry": "fundament",
 							"after": " —"
 						}
 					],
@@ -922,7 +914,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "den-fYn'al"
+							"entry": "den·fYn'al"
 						}
 					],
 					"refEn": ["evening", 0],
@@ -940,7 +932,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "den-st'art",
+							"entry": "den·st'art",
 							"after": " —"
 						}
 					],
@@ -995,7 +987,7 @@
 					"tokens": [
 						{
 							"entry": "deklAr'At",
-							"after": ":"
+							"after": ","
 						}
 					],
 					"refEn": ["said", 0],
@@ -1004,20 +996,16 @@
 				{
 					"tokens": [
 						{
-							"entry": "sub"
-						}
-					],
-					"refEn": ["under", 0],
-					"refRu": ["под", 0]
-				},
-				{
-					"tokens": [
+							"entry": "sub",
+							"after": "-",
+							"before": "«"
+						},
 						{
 							"entry": "Atmosfera"
 						}
 					],
-					"refEn": ["the heaven", 0],
-					"refRu": ["небом", 0]
+					"refEn": ["under the heaven", 0],
+					"refRu": ["под небом", 0]
 				},
 				{
 					"tokens": [
@@ -1049,7 +1037,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "In"
+							"entry": "Do"
 						}
 					],
 					"refEn": ["unto", 0],
@@ -1105,7 +1093,7 @@
 					"tokens": [
 						{
 							"entry": "materIalIz'At",
-							"after": "."
+							"after": "»."
 						}
 					],
 					"refEn": ["appear", 0],
@@ -1244,7 +1232,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "tIp-top",
+							"entry": "tIp·top",
 							"after": "."
 						}
 					],
@@ -1257,19 +1245,470 @@
 			"label": "11",
 			"enText": "And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.",
 			"ruText": "И сказал Бог: да произрастит земля зелень, траву, сеющую семя, дерево плодовитое, приносящее по роду своему плод, в котором семя его на земле. И стало так.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ","
+						}
+					],
+					"refEn": ["said", 0],
+					"refRu": ["сказал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"before": "«"
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["земля", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["Let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "prod'uktAt"
+						}
+					],
+					"refEn": ["bring forth", 0],
+					"refRu": ["произрастит", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "flora"
+						}
+					],
+					"refEn": ["grass", 0],
+					"refRu": ["зелень", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["upon", 0],
+					"refRu": ["на", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"after": ":"
+						}
+					],
+					"refEn": ["the earth", 1],
+					"refRu": ["земле", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sal'at"
+						}
+					],
+					"refEn": ["the herb", 0],
+					"refRu": ["траву", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sp'ermAt"
+						}
+					],
+					"refEn": ["yielding", 0],
+					"refRu": ["сеющую", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sperma",
+							"after": ","
+						}
+					],
+					"refEn": ["seed", 0],
+					"refRu": ["семя", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "frukt"
+						},
+						{
+							"entry": "dendro"
+						}
+					],
+					"refEn": ["the fruit tree", 0],
+					"refRu": ["дерево плодовитое", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fr'uktAt"
+						}
+					],
+					"refEn": ["yielding", 1],
+					"refRu": ["приносящее", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "self",
+							"after": "-"
+						},
+						{
+							"entry": "tYp"
+						}
+					],
+					"refEn": ["after his kind", 0],
+					"refRu": ["по роду своему", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "frukt",
+							"after": ";"
+						}
+					],
+					"refEn": ["fruit", 1],
+					"refRu": ["плод", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sperma"
+						}
+					],
+					"refEn": ["seed", 1],
+					"refRu": ["семя", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["в", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "self",
+							"after": "»."
+						}
+					],
+					"refEn": ["itself", 0],
+					"refRu": ["котором", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fAkt",
+							"after": "."
+						}
+					],
+					"refEn": ["and it was so", 0],
+					"refRu": ["И стало так", 0]
+				}
+			]
 		},
 		{
 			"label": "12",
 			"enText": "And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good.",
 			"ruText": "И произвела земля зелень, траву, сеющую семя по роду её, и дерево, приносящее плод, в котором семя его по роду его. И увидел Бог, что это хорошо.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra"
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["земля", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "prod'uktAt"
+						}
+					],
+					"refEn": ["brought forth", 0],
+					"refRu": ["произвела", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "flora",
+							"after": ":"
+						}
+					],
+					"refEn": ["grass", 0],
+					"refRu": ["зелень", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sal'at"
+						}
+					],
+					"refEn": ["herb", 0],
+					"refRu": ["траву", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sp'ermAt"
+						}
+					],
+					"refEn": ["yielding", 0],
+					"refRu": ["сеющую", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "self",
+							"after": "-"
+						},
+						{
+							"entry": "tYp"
+						}
+					],
+					"refEn": ["after his kind", 0],
+					"refRu": ["по роду её", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sperma",
+							"after": ","
+						}
+					],
+					"refEn": ["seed", 0],
+					"refRu": ["семя", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "dendro"
+						}
+					],
+					"refEn": ["the tree", 0],
+					"refRu": ["дерево", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fr'uktAt"
+						}
+					],
+					"refEn": ["yielding", 1],
+					"refRu": ["приносящее", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "frukt",
+							"after": ";"
+						}
+					],
+					"refEn": ["fruit", 0],
+					"refRu": ["плод", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "self",
+							"after": "-"
+						},
+						{
+							"entry": "tYp"
+						}
+					],
+					"refEn": ["after his kind", 1],
+					"refRu": ["по роду его", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sperma"
+						}
+					],
+					"refEn": ["seed", 1],
+					"refRu": ["семя", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["в", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "self",
+							"after": "."
+						}
+					],
+					"refEn": ["itself", 0],
+					"refRu": ["котором", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 2],
+					"refRu": ["И", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "vIzual'At",
+							"after": ";"
+						}
+					],
+					"refEn": ["saw", 0],
+					"refRu": ["увидел", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tIp·top",
+							"after": "."
+						}
+					],
+					"refEn": ["that it was good", 0],
+					"refRu": ["что это хорошо", 0]
+				}
+			]
 		},
 		{
 			"label": "13",
 			"enText": "And the evening and the morning were the third day.",
 			"ruText": "И был вечер, и было утро: день третий.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·fYn'al"
+						}
+					],
+					"refEn": ["evening", 0],
+					"refRu": ["вечер", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·st'art",
+							"after": " —"
+						}
+					],
+					"refEn": ["morning", 0],
+					"refRu": ["утро", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "numr",
+							"after": "-"
+						},
+						{
+							"entry": "Tri"
+						}
+					],
+					"refEn": ["the third", 0],
+					"refRu": ["третий", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": "."
+						}
+					],
+					"refEn": ["day", 0],
+					"refRu": ["день", 0]
+				}
+			]
 		},
 		{
 			"label": "14",

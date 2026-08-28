@@ -10,6 +10,7 @@
 //   doubled consonant = one phoneme (ss = /s/), for spelling flavour only
 
 import { isConsonant, placeStress, DENTAL_T, type Pron } from "./ipa.ts";
+import { COMPOUND } from "./marks.ts";
 
 const SINGLES: Record<string, string> = {
   p: "p", t: "t", k: "k", b: "b", d: "d", g: "g",
@@ -23,8 +24,9 @@ const SINGLES: Record<string, string> = {
 const VELARS = new Set(["k", "g"]);
 
 export function decodeNeutral(neutral: string): Pron {
-  // hyphenated compound: each part is its own stress domain (decode separately)
-  if (neutral.includes("-")) return neutral.split("-").filter(Boolean).flatMap(decodeNeutral);
+  // compound: each part is its own stress domain (decode separately)
+  if (neutral.includes(COMPOUND))
+    return neutral.split(COMPOUND).filter(Boolean).flatMap(decodeNeutral);
   const s = neutral;
   const raw: Pron = [];
   let stressNext = false;
@@ -32,7 +34,7 @@ export function decodeNeutral(neutral: string): Pron {
   for (let i = 0; i < s.length; i++) {
     const ch = s[i];
     if (ch === "'") { stressNext = true; continue; }
-    if (ch === "-" || ch === " ") continue;
+    if (ch === COMPOUND || ch === " ") continue;
     const tok = SINGLES[ch];
     if (!tok) continue;
     // A doubled letter is ONE phoneme (russglIX = /ˈrusglɪʂ/). Both reader

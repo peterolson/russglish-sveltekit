@@ -12,7 +12,7 @@
 // Casual readers skip the marks; the decoder reads them.
 
 import { placeStress, DENTAL_T, type Pron } from './ipa.ts';
-import { DOT, UMAC, ACUTE, DIAERESIS } from './marks.ts';
+import { DOT, UMAC, ACUTE, DIAERESIS, COMPOUND } from './marks.ts';
 
 const VOWEL_LETTERS = new Set(['a', 'e', 'i', 'o', 'u']);
 const isVowelLetter = (c: string | undefined) => !!c && VOWEL_LETTERS.has(c);
@@ -59,7 +59,7 @@ const CONS_LETTERS = new Set('bcdfghjklmnpqrstvwxz'.split(''));
 
 // Is the single vowel at `i` "long"? (magic-e, hiatus, or single intervocalic C.)
 // Counts consonant LETTERS to the next vowel/boundary, skipping combining marks
-// and treating '-'/' ' as a word end.
+// and treating the compound joiner / ' ' as a word end.
 function isLong(s: string, i: number): boolean {
 	let j = i + 1;
 	let cc = 0;
@@ -69,7 +69,7 @@ function isLong(s: string, i: number): boolean {
 			j++;
 			continue;
 		} // skip marks/stress
-		if (ch === '-' || ch === ' ') break; // morpheme boundary = end
+		if (ch === COMPOUND || ch === ' ') break; // morpheme boundary = end
 		if (CONS_LETTERS.has(ch)) {
 			cc++;
 			j++;
@@ -77,7 +77,7 @@ function isLong(s: string, i: number): boolean {
 		}
 		break; // hit a vowel
 	}
-	const atEnd = j >= s.length || s[j] === '-' || s[j] === ' ';
+	const atEnd = j >= s.length || s[j] === COMPOUND || s[j] === ' ';
 	const nextIsVowel = !atEnd && VOWEL_LETTERS.has(s[j]);
 	if (cc === 0) return true; // V# or hiatus
 	if (cc === 1 && nextIsVowel) return true; // VCV / magic-e → long
@@ -85,8 +85,8 @@ function isLong(s: string, i: number): boolean {
 }
 
 export function decodeEnglish(word: string): Pron {
-	// hyphenated compound: each part is its own stress domain (decode separately)
-	if (word.includes('-')) return word.split('-').filter(Boolean).flatMap(decodeEnglish);
+	// compound: each part is its own stress domain (decode separately)
+	if (word.includes(COMPOUND)) return word.split(COMPOUND).filter(Boolean).flatMap(decodeEnglish);
 	const s = word.toLowerCase();
 
 	// The bare word ⟨y⟩ is /i/, the Spanish value, unconditioned. This is the
@@ -108,7 +108,7 @@ export function decodeEnglish(word: string): Pron {
 		const c2 = s.slice(i, i + 2);
 		const rest = s.slice(i);
 
-		if (c === '-' || c === ' ' || c === ACUTE) {
+		if (c === COMPOUND || c === ' ' || c === ACUTE) {
 			i += 1;
 			continue;
 		}
@@ -203,12 +203,16 @@ export function decodeEnglish(word: string): Pron {
 		// ---- silent / syllabic e ----
 		// silent final 'e' (magic-e or French -e): final 'e' after a consonant, in a
 		// word longer than 2 letters that already has a vowel (skips be/me/he/we/the).
+		//
+		// ⟨y⟩ counts as that vowel. It is a nucleus everywhere else in this decoder,
+		// and magic-e sits behind it in type, style, byte, rhyme and thyme just as it
+		// does behind ⟨i⟩ in swine. Leaving it out made ⟨type⟩ read /ˈtəipi/.
 		if (
 			c === 'e' &&
 			i === n - 1 &&
 			CONS_LETTERS.has(s[i - 1]) &&
 			n > 2 &&
-			/[aeiou]/.test(s.slice(0, i - 1))
+			/[aeiouy]/.test(s.slice(0, i - 1))
 		) {
 			i += 1;
 			continue;
@@ -234,7 +238,7 @@ export function decodeEnglish(word: string): Pron {
 				adv = 3;
 			}
 			// word-final ⟨ow⟩: keep the GOAT offglide as a consonant /w/ (show → /ʂow/)
-			else if (c2 === 'ow' && (i + 2 >= n || s[i + 2] === '-' || s[i + 2] === ' ')) {
+			else if (c2 === 'ow' && (i + 2 >= n || s[i + 2] === COMPOUND || s[i + 2] === ' ')) {
 				toks = ['o', 'w'];
 				adv = 2;
 			} else if (DIGRAPH2[c2]) {
