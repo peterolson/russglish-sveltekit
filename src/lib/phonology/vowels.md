@@ -2,7 +2,7 @@
 
 Every Russglish word has to be pronounceable as one thing by two sets of ears.
 The consonants mostly take care of themselves — where they disagree there is an
-engineered compromise phone (`ipa.ts`: `t̪`, `s̺`, `kx`, `ɟ`, `ɦ`, `t̪θ`) and the
+engineered compromise phone (`ipa.ts`: `t̪`, `b͡β`, `s̺`, `kx`, `ɟ`, `ɦ`, `t̪θ`) and the
 choice is made once, in the inventory.
 
 The vowels are decided per word, and this is the record of how.
@@ -76,6 +76,30 @@ Never /æ/. An unstressed English vowel has no quality worth defending.
 | `dYal'ekt` | di**a**lect /ə/  | ди**а**лект /a/ | di**a̱**léct  |
 | `hulIg'an` | hoolig**a**n /ə/ | хулиг**а**н /a/ | hoolị́g**á̱**n |
 
+## 6. English /i/ against Russian /e/ → **case by case**
+
+Russian spells a great many international words with ⟨е⟩ where English has a
+plain /iː/. Unstressed ⟨е⟩ and ⟨и⟩ are near enough to interchangeable in Russian
+speech that either value is honest, so this goes per word, on rule 4's test:
+which side is the word already leaning, and which column can be bought back?
+
+|            | English          | Russian         | Russglish    |
+| ---------- | ---------------- | --------------- | ------------ |
+| `kreAt'Iv` | cr**e**ative /i/ | кр**е**атив /e/ | cr**ẹ**ạtị́ve |
+| `leksema`  | lex**ee**me /i/  | лекс**е**ма /e/ | lẹx**ẹ**ma   |
+| `res'urs`  | r**e**source /i/ | р**е**сурс /e/  | r**ẹ**sú̱rs   |
+| `siz'on`   | s**ea**son /i/   | с**е**зон /e/   | s**ea**s̱ón   |
+
+The first three take Russian's value and let the English column respell. `siz'on`
+goes the other way, by the balance rule under **Stress** below: the word already
+carries Russian final stress (сезо́н, not SEAson), so the one free vowel leans
+English — the same trade `Atmosfera` makes in rule 4.
+
+What that buys is the whole English word. ⟨season⟩ is only spellable at /i/, since
+⟨ea⟩ is a fixed digraph and no mark overrides a digraph; at /e/ the column had to
+read ⟨sẹzón⟩, which drops a letter and swaps ⟨s⟩ for ⟨z⟩. Russian pays one letter
+and nothing audible, unstressed ⟨е⟩ being [ɪ] in any real mouth anyway.
+
 ---
 
 ## Consonants: no final devoicing
@@ -98,11 +122,10 @@ an exception. Two conventions:
   `deklAr'At`. Left unstressed the verb sounds like its root with something
   trailing off the end.
 
-  **Except where the root is a noun the reader already knows.** `sp'ermAt`,
-  `fr'uktAt` and `prod'uktAt` keep the beat of спе́рма, фру́кт and проду́кт rather
-  than moving it onto the suffix. Standing next to its own noun — `spérmAt spérma`,
-  the cognate accusative of Genesis 1:11 — the shared stress is what makes the pair
-  audible as a pair.
+  **Except where the root is a noun the reader already knows.** `fr'uktAt` and
+  `prod'uktAt` keep the beat of фру́кт and проду́кт rather than moving it onto the
+  suffix. Standing next to its own noun — `frúctate frukt`, the cognate accusative
+  of Genesis 1:12 — the shared stress is what makes the pair audible as a pair.
 
 Where the shape of a word is already Russian, the stress may lean English to
 balance it — `woDa` is /ˈwot̪a/ (WAter) not /woˈt̪a/ (вода́).

@@ -39,7 +39,7 @@ const ROMAN: Record<string, string> = {
 	o: 'o',
 	u: 'u',
 	I: 'ı', // /ɪ/ Turkish dotless i
-	A: 'æ', // /æ/
+	A: 'ɑ', // /æ/
 	Y: 'ī', // /əi/
 	E: 'an' // /ə̃/
 };

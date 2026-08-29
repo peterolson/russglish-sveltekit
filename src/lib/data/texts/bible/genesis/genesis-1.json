@@ -1342,7 +1342,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sp'ermAt"
+							"entry": "semen'At"
 						}
 					],
 					"refEn": ["yielding", 0],
@@ -1351,7 +1351,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sperma",
+							"entry": "semen'a",
 							"after": ","
 						}
 					],
@@ -1405,7 +1405,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sperma"
+							"entry": "semen'a"
 						}
 					],
 					"refEn": ["seed", 1],
@@ -1496,7 +1496,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sp'ermAt"
+							"entry": "semen'At"
 						}
 					],
 					"refEn": ["yielding", 0],
@@ -1518,7 +1518,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sperma",
+							"entry": "semen'a",
 							"after": ","
 						}
 					],
@@ -1578,7 +1578,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sperma"
+							"entry": "semen'a"
 						}
 					],
 					"refEn": ["seed", 1],
@@ -1883,7 +1883,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "sez'on"
+							"entry": "siz'on"
 						}
 					],
 					"refEn": ["seasons", 0],
@@ -1932,7 +1932,107 @@
 			"label": "15",
 			"enText": "And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.",
 			"ruText": "И да будут они светильниками на тверди небесной, чтобы светить на землю. И стало так.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i",
+							"before": "«"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor"
+						},
+						{
+							"entry": "go"
+						},
+						{
+							"entry": "start"
+						}
+					],
+					"refEn": ["let them be for lights", 0],
+					"refRu": ["да будут они светильниками", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["на", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera"
+						}
+					],
+					"refEn": ["of the heaven", 0],
+					"refRu": ["небесной", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundament"
+						}
+					],
+					"refEn": ["the firmament", 0],
+					"refRu": ["тверди", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["to", 0],
+					"refRu": ["чтобы", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumIn'At"
+						}
+					],
+					"refEn": ["give light", 0],
+					"refRu": ["светить", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["upon", 0],
+					"refRu": ["на", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"after": "»."
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["землю", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fAkt",
+							"after": "."
+						}
+					],
+					"refEn": ["and it was so", 0],
+					"refRu": ["И стало так", 0]
+				}
+			]
 		},
 		{
 			"label": "16",

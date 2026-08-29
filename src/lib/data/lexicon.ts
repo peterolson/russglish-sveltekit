@@ -104,7 +104,7 @@ const unstressed = (p: Pron): Pron => p.map((t) => (t.startsWith('ˈ') ? t.slice
 const ABSORBED_BY: Record<string, string> = { t: 'ts', d: 'dʒ' };
 
 // The second boundary rule: HIATUS. A stem-final vowel drops before a suffix that
-// begins with one — sperma + -At is spermAt, not *spermaAt — because two vowels
+// begins with one — semen'a + -At is semen'At, not *semenaAt — because two vowels
 // will not share a syllable and the suffix is the one that carries the stress.
 // Both parents do this wherever they derive at all (тема → тематический).
 const isVowel = (t: Phoneme): boolean => !isConsonant(t) && t !== 'ə̃';

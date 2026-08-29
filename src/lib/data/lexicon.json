@@ -902,28 +902,28 @@
 		"partOfSpeech": ["noun"]
 	},
 	{
-		"entry": "sperma",
-		"entryEn": "sperma",
-		"entryRu": "сперма",
-		"sourceEn": "sperm, angiosperm",
-		"sourceRu": "сперма, спермий",
+		"entry": "semen'a",
+		"entryEn": "sẹmẹná̱",
+		"entryRu": "семена́",
+		"sourceEn": "semen, disseminate",
+		"sourceRu": "семена, семя",
 		"glossEn": "seed",
-		"glossRu": "семя",
+		"glossRu": "семя, семена",
 		"derivationTypes": ["borrowing"],
-		"borrowSources": ["greek"],
+		"borrowSources": ["latin"],
 		"partOfSpeech": ["noun"]
 	},
 	{
-		"entry": "sp'ermAt",
-		"entryEn": "spérmạte",
-		"entryRu": "спе́рма̣ть",
-		"sourceEn": "sperm + -ate",
-		"sourceRu": "сперма + -ать",
+		"entry": "semen'At",
+		"entryEn": "sẹmẹnạ́te",
+		"entryRu": "семена̣́ть",
+		"sourceEn": "semen + -ate",
+		"sourceRu": "семена + -ать",
 		"glossEn": "to seed, to yield seed",
 		"glossRu": "сеять семя",
 		"derivationTypes": ["affixation"],
 		"partOfSpeech": ["verb"],
-		"derivedFrom": ["sperma", "-At"]
+		"derivedFrom": ["semen'a", "-At"]
 	},
 	{
 		"entry": "frukt",
@@ -1156,9 +1156,9 @@
 		"senseShift": "near-synonym"
 	},
 	{
-		"entry": "sez'on",
-		"entryEn": "sẹzón",
-		"entryRu": "сезо́н",
+		"entry": "siz'on",
+		"entryEn": "seas̱ón",
+		"entryRu": "сизо́н",
 		"sourceEn": "season",
 		"sourceRu": "сезон",
 		"glossEn": "season, appointed time",
