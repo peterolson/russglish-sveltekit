@@ -1920,7 +1920,7 @@
 					"tokens": [
 						{
 							"entry": "kalend'ar·cYkl",
-							"after": "»."
+							"after": "."
 						}
 					],
 					"refEn": ["years", 0],
@@ -1936,8 +1936,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "i",
-							"before": "«"
+							"entry": "i"
 						}
 					],
 					"refEn": ["And", 0],
