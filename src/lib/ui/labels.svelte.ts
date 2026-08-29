@@ -9,7 +9,7 @@
 // interface text — they are the reference material the site is about, and they
 // stay in their own languages.
 
-import { getContext, setContext } from 'svelte';
+import { getContext, onMount, setContext } from 'svelte';
 import { entryFor } from '$lib/data/lexicon';
 import { capitalizeIn, formOf, type Orthography } from '$lib/orthography';
 
@@ -73,21 +73,61 @@ export class OrthographyState {
 
 const SOURCES = Symbol('sources');
 
+export type Side = 'en' | 'ru';
+
+/** Where the reveal is remembered, named for the label the switches live under. */
+export const SOURCES_STORAGE = 'resurs';
+
 /**
  * Whether the source texts are on show. Russglish ALONE by default: the page is
  * meant to be read, and a reader who can see the English sitting under it will
  * read the English instead. The sources are reference, available on request.
  *
- * Not a cookie, unlike the orthography — the server does not need to know, since
- * hidden is what it renders either way and revealing is a client-side act.
+ * localStorage rather than a cookie, unlike the orthography. The server picks the
+ * script while rendering, so a script read back after hydration would show one
+ * column and then swap to another; the sources have no such problem, because
+ * hidden is a correct first paint whatever the reader chose last time and the
+ * only cost of restoring late is the reveal itself. So the server stays out of
+ * it — asking for the English remains a client-side act, now one a reader makes
+ * once rather than on every page and every reload.
  */
 export class SourcesState {
 	en = $state(false);
 	ru = $state(false);
+
+	/** Reveal or hide one source, remembering the choice. */
+	show(side: Side, on: boolean) {
+		this[side] = on;
+		// Storage can refuse — private browsing, a full quota. The reveal itself
+		// still works; it just does not outlive the page, which is what the reader
+		// had before this was persisted at all.
+		try {
+			const shown = (['en', 'ru'] as const).filter((s) => this[s]);
+			localStorage.setItem(SOURCES_STORAGE, shown.join(' '));
+		} catch {
+			/* not remembered */
+		}
+	}
+
+	/** Read back a previous choice. Browser only; see the note above on timing. */
+	restore() {
+		try {
+			const shown = (localStorage.getItem(SOURCES_STORAGE) ?? '').split(' ');
+			this.en = shown.includes('en');
+			this.ru = shown.includes('ru');
+		} catch {
+			/* nothing remembered */
+		}
+	}
 }
 
 export function provideSources(): SourcesState {
-	return setContext(SOURCES, new SourcesState());
+	const state = setContext(SOURCES, new SourcesState());
+	// After hydration rather than in the constructor: the server cannot know what
+	// this browser stored, and a client-side render that disagreed with the HTML
+	// it is hydrating would be a mismatch rather than a reveal.
+	onMount(() => state.restore());
+	return state;
 }
 
 export function useSources(): SourcesState {

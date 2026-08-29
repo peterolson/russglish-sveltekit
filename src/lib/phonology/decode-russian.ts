@@ -1,7 +1,7 @@
 // Russian (Cyrillic) orthography → canonical phonemes, vowels included. Stress
 // follows the default rule (placeStress) unless a combining ACUTE marks the
 // stressed vowel (the reader columns use the acute; only neutral is typeable).
-// Precision marks: ш̣=[s̺] т̣=t̪θ в̣=w х̣=kx г̣=ɟ г̱=ɦ; vowels а̣/е̣=æ и̣=ɪ
+// Precision marks: ш̣=[s̺] т̣=t̪θ в̣=w х̣=kx г̣=ɟ г̱=ɦ; vowels а̣/е̣=æ и̣=ɪ в̱=b͡β
 // и̱=əi; ў=/w/. Palatalization stripped (ь / iotation softness; /j/ on-glide of
 // я/е/ё/ю kept). Unstressed -ер/-ел/-ен → /r l n/.
 //
@@ -11,7 +11,7 @@
 // English column the /d/ of ⟨period⟩ and ⟨hybrid⟩ — a real confusion for an
 // English reader — to prevent a Russian confusion that does not arise.
 
-import { placeStress, DENTAL_T, type Pron } from './ipa.ts';
+import { placeStress, BETA, DENTAL_T, type Pron } from './ipa.ts';
 import { DOT, UMAC, ACUTE, COMPOUND } from './marks.ts';
 
 const CONS: Record<string, string> = {
@@ -61,7 +61,7 @@ const DOT_ALT: Record<string, string> = {
 	е: 'æ',
 	и: 'ɪ'
 };
-const UMAC_ALT: Record<string, string> = { г: 'ɦ', и: 'əi' };
+const UMAC_ALT: Record<string, string> = { г: 'ɦ', и: 'əi', в: BETA };
 
 const isVowelChar = (c: string) => c in VOW;
 

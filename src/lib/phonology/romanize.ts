@@ -28,6 +28,7 @@ const ROMAN: Record<string, string> = {
 	S: 'ś', // /s̺/
 	T: 'th', // /t̪θ/
 	D: 'dt', // /t̪/
+	B: 'bv', // /b͡β/
 	K: 'kh', // /kx/
 	G: 'ǧ', // /ɟ/
 	H: 'gh', // /ɦ/

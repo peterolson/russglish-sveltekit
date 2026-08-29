@@ -1714,7 +1714,219 @@
 			"label": "14",
 			"enText": "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:",
 			"ruText": "И сказал Бог: да будут светила на тверди небесной для отделения дня от ночи, и для знамений, и времён, и дней, и годов;",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ","
+						}
+					],
+					"refEn": ["said", 0],
+					"refRu": ["сказал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go",
+							"before": "«"
+						}
+					],
+					"refEn": ["Let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "start"
+						}
+					],
+					"refEn": ["there be", 0],
+					"refRu": ["будут", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor"
+						}
+					],
+					"refEn": ["lights", 0],
+					"refRu": ["светила", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["на", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera"
+						}
+					],
+					"refEn": ["of the heaven", 0],
+					"refRu": ["небесной", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundament"
+						}
+					],
+					"refEn": ["the firmament", 0],
+					"refRu": ["тверди", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["to", 0],
+					"refRu": ["для", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "separ'At"
+						}
+					],
+					"refEn": ["divide", 0],
+					"refRu": ["отделения", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den"
+						}
+					],
+					"refEn": ["the day", 0],
+					"refRu": ["дня", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "eks"
+						}
+					],
+					"refEn": ["from", 0],
+					"refRu": ["от", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nokt",
+							"after": ","
+						}
+					],
+					"refEn": ["the night", 0],
+					"refRu": ["ночи", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["for", 0],
+					"refRu": ["для", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sImBol"
+						}
+					],
+					"refEn": ["signs", 0],
+					"refRu": ["знамений", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sez'on"
+						}
+					],
+					"refEn": ["seasons", 0],
+					"refRu": ["времён", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 2],
+					"refRu": ["и", 2]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den"
+						}
+					],
+					"refEn": ["days", 0],
+					"refRu": ["дней", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 3],
+					"refRu": ["и", 3]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kalend'ar·cYkl",
+							"after": "»."
+						}
+					],
+					"refEn": ["years", 0],
+					"refRu": ["годов", 0]
+				}
+			]
 		},
 		{
 			"label": "15",

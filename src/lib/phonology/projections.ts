@@ -22,6 +22,7 @@ type Ear = Record<string, Phoneme | Phoneme[]>;
 // vowels, and aspiration — not voicing — is what cues its stop contrast.
 const ENGLISH_EAR: Ear = {
 	t̪: 't', // ⟨ṭ⟩ — English side of the Grimm t↔d stop
+	b͡β: 'b', // ⟨ḅ⟩ — English side of the Byzantine β; it hears the stop onset
 	t̪θ: 'θ', // English HAS θ, so the dental affricate lands on it cleanly
 	s̺: 's', // ⟨ṣ⟩ — English side of s↔ш; English /s/ is the laxer sibilant
 	kx: 'k', // ⟨kh⟩ — no /x/ in English; the stop onset is what survives
@@ -43,6 +44,7 @@ const ENGLISH_EAR: Ear = {
 const RUSSIAN_EAR: Ear = {
 	w: 'v', // no /w/ — в takes it
 	t̪: 'd', // ⟨д̣⟩ — Russian side of the Grimm t↔d stop (to/до, two/два)
+	b͡β: 'v', // ⟨в̱⟩ — Russian side of the Byzantine β; it hears the fricative release
 	t̪θ: 't', // no /θ/; modern loans send it to т (Smith → Смит)
 	s̺: 'ʂ', // ⟨ш̣⟩ — Russian side of s↔ш; Russian /s/ is too sharp to claim it
 	kx: 'x', // ⟨х̣⟩ — Russian side of k↔x

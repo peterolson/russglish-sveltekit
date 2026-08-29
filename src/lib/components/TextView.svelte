@@ -28,11 +28,19 @@
 			     before you can read anything else. -->
 			<div class="sources">
 				<label lang="en">
-					<input type="checkbox" bind:checked={sources.en} />
+					<input
+						type="checkbox"
+						checked={sources.en}
+						onchange={(event) => sources.show('en', event.currentTarget.checked)}
+					/>
 					Show English translation
 				</label>
 				<label lang="ru">
-					<input type="checkbox" bind:checked={sources.ru} />
+					<input
+						type="checkbox"
+						checked={sources.ru}
+						onchange={(event) => sources.show('ru', event.currentTarget.checked)}
+					/>
 					Показать русский перевод
 				</label>
 			</div>

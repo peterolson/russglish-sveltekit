@@ -13,8 +13,19 @@ export type Pron = Phoneme[];
 // (to/до, two/два, water/вода). Written ṭ (English) / д̣ (Russian); neutral D.
 export const DENTAL_T: Phoneme = 't̪';
 
+// The Byzantine-beta compromise affricate: English /b/ ↔ Russian /v/. Greek β
+// went b → β → v over its history, and the two parents took their words off
+// that road at different points — English through Latin while it was still a
+// stop, Russian through Byzantine Greek once it had become a fricative:
+// symbol/символ, Abraham/Авраам, alphabet/алфавит, Babylon/Вавилон. A bilabial
+// stop with a fricative release is the stage they both passed through, which is
+// why each ear can still hear its own side of it. Written ḅ (English) / в̱
+// (Russian); neutral B.
+export const BETA: Phoneme = 'b͡β';
+
 export const CONSONANTS = new Set<Phoneme>([
 	DENTAL_T, // unaspirated dental stop (Grimm t↔d)
+	BETA, // voiced bilabial affricate (Byzantine β: b↔v)
 	'p',
 	't',
 	'k',

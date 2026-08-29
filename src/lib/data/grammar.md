@@ -108,8 +108,29 @@ The ones that converge are Latin, and they are few:
 | `ex`    | from, out of             | separation, source |
 | `super` | above, over, upon        |                    |
 | `inter` | between, in the midst of |                    |
+| `pro`   | for, for the purpose of  | purpose            |
 
 Where none fits, the relation goes to punctuation or to word order instead.
+
+### `pro` takes a verb as readily as a noun
+
+Purpose is the one relation where the two parents build the phrase out of
+different parts of speech. English uses an infinitive, _to divide_; Russian uses
+a deverbal noun, _для отделения_. There is no shape that is both.
+
+Since a Russglish word has one form everywhere, `pro` simply governs what it is
+given, and each reader recovers their own construction:
+
+> `pro separáte dayn ex noct` — _to divide the day from the night_ · _для отделения дня от ночи_
+> `pro signál plus sezón` — _for signs, and for seasons_ · _для знамений, и времён_
+
+An English reader takes `pro separáte` as _for to divide_, which is what the
+King James itself says elsewhere; a Russian reader takes «про сепара́ть» as the
+_для_ + noun it is spelled like. The same word then does the plain nominal job in
+`pro signál`, where both parents agree.
+
+This is the only preposition that governs a verb, and it is why: prepositions are
+otherwise prefix operators taking a noun (see **Word order** below).
 
 ## Punctuated offsets, not coordination
 
@@ -226,6 +247,8 @@ The exceptions are **operators, which sit between their operands**:
 
 Prepositions are a third case: prefix operators, taking the noun after them. The
 phrase they build is then head-final against its own head — `[sub fundamént] woda`.
+(`pro` is the exception, and takes a verb where the source does; see
+**Prepositions** above.)
 
 Being head-final is what lets the language shed relative clauses, which is worth
 more than it sounds. Verse 7 needs _the waters which were under the firmament_ and

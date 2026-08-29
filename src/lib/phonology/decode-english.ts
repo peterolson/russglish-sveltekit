@@ -11,7 +11,7 @@
 //   macron-below (V̲) = the /a/-exotic value: a→/a/(PALM), o→/u/  (ma̲ma, do̲)
 // Casual readers skip the marks; the decoder reads them.
 
-import { placeStress, DENTAL_T, type Pron } from './ipa.ts';
+import { placeStress, BETA, DENTAL_T, type Pron } from './ipa.ts';
 import { DOT, UMAC, ACUTE, DIAERESIS, COMPOUND } from './marks.ts';
 
 const VOWEL_LETTERS = new Set(['a', 'e', 'i', 'o', 'u']);
@@ -142,6 +142,11 @@ export function decodeEnglish(word: string): Pron {
 			i += 2;
 			continue;
 		} // ṭ→[t̪] (Grimm t↔d)
+		if (c === 'b' && s[i + 1] === DOT) {
+			out.push(BETA);
+			i += 2;
+			continue;
+		} // ḅ→[b͡β] (Byzantine β, b↔v)
 		// s̱ → /z/. English writes a great many /z/ with ⟨s⟩ — visual, music, easy,
 		// season, rose — and Russian writes them with ⟨з⟩, so without this the
 		// English column would have to respell (⟨vizual⟩) and lose the word. The

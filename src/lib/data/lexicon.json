@@ -253,6 +253,19 @@
 		"morphType": "suffix"
 	},
 	{
+		"entry": "-or",
+		"entryEn": "-or",
+		"entryRu": "-ор",
+		"sourceEn": "-or",
+		"sourceRu": "-ор",
+		"glossEn": "forms nouns: the one that does X",
+		"glossRu": "суффикс деятеля",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["noun"],
+		"morphType": "suffix"
+	},
+	{
 		"entry": "kreAtIv'At",
 		"entryEn": "crẹạtịvạ́te",
 		"entryRu": "креа̣ти̣ва̣́ть",
@@ -596,6 +609,19 @@
 		"partOfSpeech": ["verb"]
 	},
 	{
+		"entry": "IlumIn'At",
+		"entryEn": "illumịnạ́te",
+		"entryRu": "и̣ллюми̣на̣́ть",
+		"sourceEn": "illuminate",
+		"sourceRu": "иллюминировать",
+		"glossEn": "to light, to give light; to illuminate",
+		"glossRu": "светить, освещать; иллюминировать",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"],
+		"senseShift": "broadening"
+	},
+	{
 		"entry": "IlumInAciE",
 		"entryEn": "illumịnạtion",
 		"entryRu": "и̣ллюми̣на̣ция",
@@ -603,10 +629,23 @@
 		"sourceRu": "иллюминация",
 		"glossEn": "light, illumination",
 		"glossRu": "свет, иллюминация",
-		"derivationTypes": ["borrowing"],
-		"borrowSources": ["latin"],
+		"derivationTypes": ["affixation"],
 		"partOfSpeech": ["noun"],
+		"derivedFrom": ["IlumIn'At", "-ciE"],
 		"senseShift": "broadening"
+	},
+	{
+		"entry": "IlumInAtor",
+		"entryEn": "illumịnạtor",
+		"entryRu": "и̣ллюми̣на̣тор",
+		"sourceEn": "illuminator",
+		"sourceRu": "иллюминатор",
+		"glossEn": "luminary, light-giver; illuminator",
+		"glossRu": "светило; иллюминатор",
+		"derivationTypes": ["affixation"],
+		"partOfSpeech": ["noun"],
+		"derivedFrom": ["IlumIn'At", "-or"],
+		"senseShift": "near-synonym"
 	},
 	{
 		"entry": "foton",
@@ -1102,5 +1141,78 @@
 		"derivationTypes": ["borrowing"],
 		"borrowSources": ["pie"],
 		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "sImBol",
+		"entryEn": "symḅol",
+		"entryRu": "си̣мв̱ол",
+		"sourceEn": "symbol",
+		"sourceRu": "символ",
+		"glossEn": "sign, token; symbol",
+		"glossRu": "знамение, знак; символ",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"],
+		"senseShift": "near-synonym"
+	},
+	{
+		"entry": "sez'on",
+		"entryEn": "sẹzón",
+		"entryRu": "сезо́н",
+		"sourceEn": "season",
+		"sourceRu": "сезон",
+		"glossEn": "season, appointed time",
+		"glossRu": "сезон, время",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["french"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "pro",
+		"entryEn": "pro",
+		"entryRu": "про",
+		"sourceEn": "pro bono, pro forma",
+		"sourceRu": "про запас, про-",
+		"glossEn": "for, for the purpose of",
+		"glossRu": "для, ради",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["preposition"]
+	},
+	{
+		"entry": "kalend'ar",
+		"entryEn": "ca̱lendá̱r",
+		"entryRu": "календа́рь",
+		"sourceEn": "calendar",
+		"sourceRu": "календарь",
+		"glossEn": "calendar",
+		"glossRu": "календарь",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "cYkl",
+		"entryEn": "cỵcle",
+		"entryRu": "ци̱кл",
+		"sourceEn": "cycle",
+		"sourceRu": "цикл",
+		"glossEn": "cycle, round",
+		"glossRu": "цикл, круг",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "kalend'ar·cYkl",
+		"entryEn": "ca̱lendá̱r·cỵcle",
+		"entryRu": "календа́рь·ци̱кл",
+		"sourceEn": "calendar + cycle",
+		"sourceRu": "календарь + цикл",
+		"glossEn": "year",
+		"glossRu": "год",
+		"derivationTypes": ["compound"],
+		"partOfSpeech": ["noun"],
+		"derivedFrom": ["kalend'ar", "cYkl"]
 	}
 ]

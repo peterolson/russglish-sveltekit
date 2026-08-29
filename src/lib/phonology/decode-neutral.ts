@@ -5,11 +5,11 @@
 //
 //   lowercase: p t k b d g m n s z f v r l h w   y=/j/  j=dʒ  c=ts
 //   vowels:    a e i o u   I=ɪ A=æ Y=əi E=ə̃
-//   cap cons:  G=ɟ S=[s̺] C=tʃ(ч) Z=ʐ(ж) X=ʂ(ш) T=t̪θ K=kx H=ɦ
+//   cap cons:  G=ɟ S=[s̺] C=tʃ(ч) Z=ʐ(ж) X=ʂ(ш) T=t̪θ K=kx H=ɦ D=t̪ B=b͡β
 //   ŋ positional: n before a velar (k/g)
 //   doubled consonant = one phoneme (ss = /s/), for spelling flavour only
 
-import { isConsonant, placeStress, DENTAL_T, type Pron } from "./ipa.ts";
+import { isConsonant, placeStress, BETA, DENTAL_T, type Pron } from "./ipa.ts";
 import { COMPOUND } from "./marks.ts";
 
 const SINGLES: Record<string, string> = {
@@ -18,7 +18,7 @@ const SINGLES: Record<string, string> = {
   y: "j", j: "dʒ", c: "ts",
   a: "a", e: "e", i: "i", o: "o", u: "u",
   I: "ɪ", A: "æ", Y: "əi", E: "ə̃",
-  G: "ɟ", S: "s̺", C: "tʃ", Z: "ʐ", X: "ʂ", T: "t̪θ", K: "kx", H: "ɦ", D: DENTAL_T,
+  G: "ɟ", S: "s̺", C: "tʃ", Z: "ʐ", X: "ʂ", T: "t̪θ", K: "kx", H: "ɦ", D: DENTAL_T, B: BETA,
 };
 
 const VELARS = new Set(["k", "g"]);
