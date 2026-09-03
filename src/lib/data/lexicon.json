@@ -1214,5 +1214,78 @@
 		"derivationTypes": ["compound"],
 		"partOfSpeech": ["noun"],
 		"derivedFrom": ["kalend'ar", "cYkl"]
+	},
+	{
+		"entry": "duo",
+		"entryEn": "duo",
+		"entryRu": "дуо",
+		"sourceEn": "duo, duet",
+		"sourceRu": "дуо, дуэт",
+		"glossEn": "two",
+		"glossRu": "два",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["numeral"]
+	},
+	{
+		"entry": "konstr'ukt",
+		"entryEn": "constrú̱ct",
+		"entryRu": "констру́кт",
+		"sourceEn": "construct",
+		"sourceRu": "конструкт, конструировать",
+		"glossEn": "to make, to fashion; to construct",
+		"glossRu": "создавать, делать; конструировать",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"],
+		"senseShift": "broadening"
+	},
+	{
+		"entry": "domIn'At",
+		"entryEn": "domịnạ́te",
+		"entryRu": "доми̣на̣́ть",
+		"sourceEn": "dominate",
+		"sourceRu": "доминировать",
+		"glossEn": "to rule, to govern",
+		"glossRu": "править, управлять",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"]
+	},
+	{
+		"entry": "Astro",
+		"entryEn": "astro",
+		"entryRu": "а̣стро",
+		"sourceEn": "astronomy, asteroid",
+		"sourceRu": "астрономия, астра",
+		"glossEn": "star",
+		"glossRu": "звезда",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["greek"],
+		"partOfSpeech": ["noun"]
+	},
+	{
+		"entry": "fIks'At",
+		"entryEn": "fịxạ́te",
+		"entryRu": "фи̣кса̣́ть",
+		"sourceEn": "fixate, fix",
+		"sourceRu": "фиксировать, фиксация",
+		"glossEn": "to set, to place, to fix",
+		"glossRu": "поставить, закрепить",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["verb"]
+	},
+	{
+		"entry": "kwadro",
+		"entryEn": "quadro",
+		"entryRu": "кв̣адро",
+		"sourceEn": "quadro-, quadcopter",
+		"sourceRu": "квадро, квадрокоптер",
+		"glossEn": "four",
+		"glossRu": "четыре",
+		"derivationTypes": ["borrowing"],
+		"borrowSources": ["latin"],
+		"partOfSpeech": ["numeral"]
 	}
 ]

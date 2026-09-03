@@ -59,9 +59,22 @@ const OPENS_QUOTE = /[«"'([]$/;
 // claimed as a new word.
 export const GROUP = '-';
 
-export function words(sentence: Sentence, orthography: Orthography): Word[] {
+/**
+ * Whether this line finishes the sentence it is in. A verse can stop mid-sentence
+ * — 1:17 ends on a comma and runs straight into 1:18 — and the line after one
+ * that does must not capitalize its first word. The punctuation already records
+ * this, so nothing in the data has to repeat it.
+ */
+export function closes(sentence: Sentence): boolean {
+	const tokens = sentence.phrases.flatMap((phrase) => phrase.tokens);
+	const last = tokens[tokens.length - 1];
+	// An untranslated line says nothing about the next one; assume a fresh start.
+	return last === undefined || ENDS_SENTENCE.test(last.after ?? '');
+}
+
+export function words(sentence: Sentence, orthography: Orthography, opens = true): Word[] {
 	const out: Word[] = [];
-	let opensSentence = true;
+	let opensSentence = opens;
 
 	sentence.phrases.forEach((phrase, phraseIndex) => {
 		for (const token of phrase.tokens) {

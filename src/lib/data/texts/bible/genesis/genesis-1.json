@@ -750,7 +750,7 @@
 				{
 					"tokens": [
 						{
-							"entry": "kreAtIv'At"
+							"entry": "konstr'ukt"
 						}
 					],
 					"refEn": ["made", 0],
@@ -2037,25 +2037,499 @@
 			"label": "16",
 			"enText": "And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.",
 			"ruText": "И создал Бог два светила великие: светило большее, для управления днём, и светило меньшее, для управления ночью, и звёзды;",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "konstr'ukt"
+						}
+					],
+					"refEn": ["made", 0],
+					"refRu": ["создал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "duo"
+						}
+					],
+					"refEn": ["two", 0],
+					"refRu": ["два", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mega"
+						}
+					],
+					"refEn": ["great", 0],
+					"refRu": ["великие", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor",
+							"after": ":"
+						}
+					],
+					"refEn": ["lights", 0],
+					"refRu": ["светила", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mega"
+						}
+					],
+					"refEn": ["greater", 0],
+					"refRu": ["большее", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor"
+						}
+					],
+					"refEn": ["light", 0],
+					"refRu": ["светило", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["to", 0],
+					"refRu": ["для", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "domIn'At"
+						}
+					],
+					"refEn": ["rule", 0],
+					"refRu": ["управления", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den"
+						}
+					],
+					"refEn": ["the day", 0],
+					"refRu": ["днём", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mIni"
+						}
+					],
+					"refEn": ["lesser", 0],
+					"refRu": ["меньшее", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor"
+						}
+					],
+					"refEn": ["light", 1],
+					"refRu": ["светило", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["to", 1],
+					"refRu": ["для", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "domIn'At"
+						}
+					],
+					"refEn": ["rule", 1],
+					"refRu": ["управления", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nokt",
+							"after": ","
+						}
+					],
+					"refEn": ["the night", 0],
+					"refRu": ["ночью", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["also", 0],
+					"refRu": ["и", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Astro",
+							"after": "."
+						}
+					],
+					"refEn": ["the stars", 0],
+					"refRu": ["звёзды", 0]
+				}
+			]
 		},
 		{
 			"label": "17",
 			"enText": "And God set them in the firmament of the heaven to give light upon the earth,",
 			"ruText": "И поставил их Бог на тверди небесной, чтобы светить на землю,",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fIks'At"
+						}
+					],
+					"refEn": ["set", 0],
+					"refRu": ["поставил", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAtor"
+						}
+					],
+					"refEn": ["them", 0],
+					"refRu": ["их", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["на", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera"
+						}
+					],
+					"refEn": ["of the heaven", 0],
+					"refRu": ["небесной", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundament"
+						}
+					],
+					"refEn": ["the firmament", 0],
+					"refRu": ["тверди", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						}
+					],
+					"refEn": ["to", 0],
+					"refRu": ["чтобы", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumIn'At"
+						}
+					],
+					"refEn": ["give light", 0],
+					"refRu": ["светить", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["upon", 0],
+					"refRu": ["на", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"after": ","
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["землю", 0]
+				}
+			]
 		},
 		{
 			"label": "18",
 			"enText": "And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.",
 			"ruText": "и управлять днём и ночью, и отделять свет от тьмы. И увидел Бог, что это хорошо.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						},
+						{
+							"entry": "domIn'At"
+						}
+					],
+					"refEn": ["to rule", 0],
+					"refRu": ["управлять", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den"
+						}
+					],
+					"refEn": ["over the day", 0],
+					"refRu": ["днём", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "nokt",
+							"after": ","
+						}
+					],
+					"refEn": ["over the night", 0],
+					"refRu": ["ночью", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 2]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "pro"
+						},
+						{
+							"entry": "separ'At"
+						}
+					],
+					"refEn": ["to divide", 0],
+					"refRu": ["отделять", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "IlumInAciE"
+						}
+					],
+					"refEn": ["the light", 0],
+					"refRu": ["свет", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "eks"
+						}
+					],
+					"refEn": ["from", 0],
+					"refRu": ["от", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "obskurAciE",
+							"after": "."
+						}
+					],
+					"refEn": ["the darkness", 0],
+					"refRu": ["тьмы", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 2],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "vIzual'At",
+							"after": ";"
+						}
+					],
+					"refEn": ["saw", 0],
+					"refRu": ["увидел", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tIp·top",
+							"after": "."
+						}
+					],
+					"refEn": ["that it was good", 0],
+					"refRu": ["что это хорошо", 0]
+				}
+			]
 		},
 		{
 			"label": "19",
 			"enText": "And the evening and the morning were the fourth day.",
 			"ruText": "И был вечер, и было утро: день четвёртый.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·fYn'al"
+						}
+					],
+					"refEn": ["evening", 0],
+					"refRu": ["вечер", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·st'art",
+							"after": " —"
+						}
+					],
+					"refEn": ["morning", 0],
+					"refRu": ["утро", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "numr",
+							"after": "-"
+						},
+						{
+							"entry": "kwadro"
+						}
+					],
+					"refEn": ["the fourth", 0],
+					"refRu": ["четвёртый", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": "."
+						}
+					],
+					"refEn": ["day", 0],
+					"refRu": ["день", 0]
+				}
+			]
 		},
 		{
 			"label": "20",

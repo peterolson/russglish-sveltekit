@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SentenceView from './SentenceView.svelte';
 	import type { Text } from '$lib/data/schema.types';
+	import { closes } from '$lib/text/render';
 	import { labels, useSources } from '$lib/ui/labels.svelte';
 
 	const t = labels();
@@ -50,7 +51,7 @@
 	{#if text.sentences.length}
 		<div class="body">
 			{#each text.sentences as sentence, i (i)}
-				<SentenceView {sentence} />
+				<SentenceView {sentence} opens={i === 0 || closes(text.sentences[i - 1])} />
 			{/each}
 		</div>
 	{:else}

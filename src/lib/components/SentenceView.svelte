@@ -4,8 +4,8 @@
 	import { pieces, words } from '$lib/text/render';
 	import { labels, useOrthography, useSources } from '$lib/ui/labels.svelte';
 
-	type Props = { sentence: Sentence; heading?: boolean };
-	let { sentence, heading = false }: Props = $props();
+	type Props = { sentence: Sentence; heading?: boolean; opens?: boolean };
+	let { sentence, heading = false, opens = true }: Props = $props();
 
 	// Which WORD the reader is pointing at — the gloss is a property of the word.
 	// Null when nothing is active; the gloss row keeps its height either way so
@@ -15,7 +15,7 @@
 	const orthography = useOrthography();
 	const sources = useSources();
 	const t = labels();
-	const line = $derived(words(sentence, orthography.current));
+	const line = $derived(words(sentence, orthography.current, opens));
 	const en = $derived(pieces(sentence, 'en'));
 	const ru = $derived(pieces(sentence, 'ru'));
 	const shown = $derived(active === null ? null : line[active]);
