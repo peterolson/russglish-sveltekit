@@ -52,6 +52,11 @@ This is the one device both parents already own. Russian **writes** exactly this
 dash where it drops the present-tense copula (_Москва — столица_), and an English
 reader takes a dash as apposition and supplies the _is_ without being asked.
 
+Because the dash is the copula, it is **not** available as a parenthesis. A pair
+of dashes around an aside would read as a predicate until the second one closed
+it; see **A relative clause becomes an appositive noun** below for what does that
+job instead.
+
 ## `start` is the existential
 
 The same word does _to begin_ and _to come to be_, which lets a fiat and its
@@ -83,6 +88,39 @@ uses one, the noun is simply said again.
 The semicolon carries the subordination that _that_ would have carried. This costs
 less than it looks like it should, because the repeated noun is usually only a word
 or two from its antecedent.
+
+## A relative clause becomes an appositive noun
+
+Repetition handles a pronoun that is the subject of its own clause. It does not
+handle a relative clause hanging off a noun in the middle of a list, where there
+is no room to stop and start again.
+
+> `total-type reptile bio fauna, woda mass-product, plus total-type plumage aviator`
+> _every living creature that moveth, which the waters brought forth abundantly,
+> after their kind, and every winged fowl after his kind_
+
+Where the clause's verb has a noun in the lexicon, the clause is restated as that
+noun and set beside its head with commas: _which the waters brought forth_ is
+_the waters' product_. Both parents punctuate an appositive this way, and the
+noun keeps the lexical echo the source had — verse 20's `mass productáte` is
+answered here by `mass-product`, as the Hebrew answers שרץ with שרץ.
+
+The alternatives were tried and rejected for 1:21:
+
+- **Preposing the clause as a hyphen group** (`woda-mass-productate fauna`, on the
+  model of `total-type`). Three words is too heavy a modifier to sit in front of a
+  noun that already carries two; the hyphen group is for clauses a word or two
+  long (see **The hyphen group rewrites a short relative clause** below).
+- **Setting it off with paired dashes.** The dash is the copula; `fauna — woda`
+  reads as _the creatures are water_ until the closing dash arrives. Russglish
+  gives up the parenthetical dash to keep the copular one unambiguous.
+- **Parentheses.** Legible to both parents, but they read as a gloss on the text
+  rather than as the text.
+
+So the order of preference for a relative clause is: reduce it to a bare phrase
+after the noun where the parents would (`woda sub fundamént`); end the sentence
+and repeat the noun (above); a word-sized hyphen group in front of the noun; and,
+for anything longer, an appositive noun.
 
 ## `y` and `plus` are not the same "and"
 
@@ -132,6 +170,23 @@ _для_ + noun it is spelled like. The same word then does the plain nominal jo
 This is the only preposition that governs a verb, and it is why: prepositions are
 otherwise prefix operators taking a noun (see **Word order** below).
 
+### A prepositional phrase follows what it modifies
+
+> `woda sub fundamént` — _the waters under the firmament_
+> `go start fundamént inter woda` — _let there be a firmament in the midst of the waters_
+> `populáte woda endo okeán` — _fill the waters in the seas_
+
+This is the parents' own order, and both of them use it for nouns and verbs
+alike: _the man in the hat_, _человек в шляпе_. Whether the phrase modifies the
+noun before it or the verb further back is left to context, exactly as it is in
+the King James and the Synodal, where _divided the waters under the firmament from
+the waters above the firmament_ is formally ambiguous and no reader notices.
+
+An earlier draft put these phrases in front of the noun, head-final, with a hyphen
+to mark the adjectival reading — `sub-fundamént woda`. It was abandoned as too
+clever: that order is native to neither parent, and the one thing it bought, an
+explicit adjectival/adverbial contrast, is a distinction the parents get by without.
+
 ## Punctuated offsets, not coordination
 
 Where a source strings clauses together, Russglish prefers to stop.
@@ -166,32 +221,28 @@ ambiguous once three nouns stack up — `self type frukt` could bracket either w
 so the hyphen binds the ones that go together.
 
 > `frúctate self-type frukt` — yielding fruit after its own kind
+> `total-type reptile bio fauna` — every living creature that moveth, after their kind
+> `mega okeán-monster` — great whales
 
 It is a parsing aid and nothing more. Separate words already have separate stress
 domains, so unlike the interpunct it changes no phonology, and it earns **no
 lexicon entry**: `self-type` is `self` + `tYp`, both already headwords, and the
 composition stays visible on the page.
 
-### The hyphen separates adjectival from adverbial
+The group is made of bare words. A prepositional phrase is never bound this way:
+it follows its head loose (see **A prepositional phrase follows what it
+modifies** above).
 
-Because only NOMINAL modifiers are head-final — verbs are infix operators, see
-below — binding a prepositional phrase says it modifies the noun after it, and
-leaving it loose says it modifies the verb. The mark is the only thing carrying
-that distinction, in a language with neither cases nor relative pronouns.
+### The hyphen group rewrites a short relative clause
 
-|                      |            |                                 |
-| -------------------- | ---------- | ------------------------------- |
-| `inter woda`         | adverbial  | where the firmament comes to be |
-| `sub-fundamént woda` | adjectival | which waters are meant          |
-
-Genesis 1:6 and 1:7 need it in consecutive verses. In 6 the firmament does not yet
-exist — יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם, _let there be a firmament in the midst of the
-waters_ — and a thing cannot be described as "the between-the-waters firmament"
-before there is one to describe. The phrase is part of what is commanded.
-
-By 7 it exists, and _the waters which were under the firmament_ picks out which
-waters are meant from a referent already in hand. Same preposition, same nouns,
-different work — and only the hyphen shows it.
+Because a bound group is a nominal modifier, it can stand where a source has a
+short relative clause and the language has no pronoun to build one with. _After
+their kind_ is לְמִינֵהֶם, each-in-its-own-kind, and `total-type` puts that in
+front of the noun as one word-sized modifier. The mechanism is for clauses of that
+size. Anything longer becomes an appositive noun instead (see **A relative clause
+becomes an appositive noun** above); `woda-mass-productáte fauna` was tried for
+1:21 and rejected as too heavy to sit in front of a noun already carrying two
+modifiers.
 
 ### Why round this way
 
@@ -235,7 +286,11 @@ The default is **head-final** — what modifies comes before what it modifies.
 > `premiér dayn` — first day
 > `null forma` — without form
 > `dayn-stárt` — the day's start, morning
-> `sub fundamént woda` — the water under the firmament
+> `okeán-monster` — sea monster
+
+This is the order both parents give an adjective, and it is extended to every
+**bare** modifier — a noun modifying a noun included, where English agrees
+(_fruit tree_) and Russian would more often use a genitive after the head.
 
 The exceptions are **operators, which sit between their operands**:
 
@@ -246,14 +301,17 @@ The exceptions are **operators, which sit between their operands**:
 | the dash     | subject and predicate | `illumination — tip-top`  |
 
 Prepositions are a third case: prefix operators, taking the noun after them. The
-phrase they build is then head-final against its own head — `[sub fundamént] woda`.
-(`pro` is the exception, and takes a verb where the source does; see
-**Prepositions** above.)
+phrase they build is **not** head-final — it follows whatever it modifies, noun or
+verb, as it does in both parents: `woda [sub fundamént]`. (`pro` is the
+exception to what a preposition governs, and takes a verb where the source does;
+see **Prepositions** above.)
 
-Being head-final is what lets the language shed relative clauses, which is worth
-more than it sounds. Verse 7 needs _the waters which were under the firmament_ and
-_воду, которая под твердью_ — a relative pronoun and a copula that neither parent
-shares — and says `sub fundamént woda` instead, with no subordination at all.
+Shedding relative clauses costs nothing here, which is worth noticing. Verse 7
+needs _the waters which were under the firmament_ and _воду, которая под твердью_
+— a relative pronoun and a copula that neither parent shares — and says `woda sub
+fundamént` instead, with no subordination at all. But that is not a Russglish
+invention: both parents already reduce such a clause to a bare phrase after the
+noun. The language simply never has the unreduced version to fall back on.
 
 A fiat has no subject, so its verb comes first by default rather than by rule (see
 `go` above). Both parents allow verb-initial imperatives (_Let there be_, _да

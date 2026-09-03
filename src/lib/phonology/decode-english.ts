@@ -57,6 +57,16 @@ const SINGLE_CONS: Record<string, string> = {
 };
 const CONS_LETTERS = new Set('bcdfghjklmnpqrstvwxz'.split(''));
 
+// The letter before `i`, looking past any combining marks. A marked consonant —
+// g̣, ṭ, ḅ, s̱ — is still a consonant to a rule that asks what precedes a letter;
+// without this the silent-e of ⟨plumág̣e⟩ read as a live vowel, because the
+// character before it was the dot rather than the ⟨g⟩.
+function letterBefore(s: string, i: number): string | undefined {
+	let j = i - 1;
+	while (j >= 0 && (s[j] === DOT || s[j] === UMAC || s[j] === ACUTE || s[j] === DIAERESIS)) j--;
+	return s[j];
+}
+
 // Is the single vowel at `i` "long"? (magic-e, hiatus, or single intervocalic C.)
 // Counts consonant LETTERS to the next vowel/boundary, skipping combining marks
 // and treating the compound joiner / ' ' as a word end.
@@ -215,7 +225,7 @@ export function decodeEnglish(word: string): Pron {
 		if (
 			c === 'e' &&
 			i === n - 1 &&
-			CONS_LETTERS.has(s[i - 1]) &&
+			CONS_LETTERS.has(letterBefore(s, i) ?? '') &&
 			n > 2 &&
 			/[aeiouy]/.test(s.slice(0, i - 1))
 		) {

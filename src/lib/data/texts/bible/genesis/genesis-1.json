@@ -787,8 +787,16 @@
 				{
 					"tokens": [
 						{
-							"entry": "sub",
-							"after": "-"
+							"entry": "woDa"
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["воду", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sub"
 						},
 						{
 							"entry": "fundament"
@@ -796,15 +804,6 @@
 					],
 					"refEn": ["under the firmament", 0],
 					"refRu": ["под твердью", 0]
-				},
-				{
-					"tokens": [
-						{
-							"entry": "woDa"
-						}
-					],
-					"refEn": ["waters", 0],
-					"refRu": ["воду", 0]
 				},
 				{
 					"tokens": [
@@ -818,25 +817,24 @@
 				{
 					"tokens": [
 						{
-							"entry": "supr",
-							"after": "-"
-						},
-						{
-							"entry": "fundament"
-						}
-					],
-					"refEn": ["above the firmament", 0],
-					"refRu": ["над твердью", 0]
-				},
-				{
-					"tokens": [
-						{
-							"entry": "woDa",
-							"after": "."
+							"entry": "woDa"
 						}
 					],
 					"refEn": ["waters", 1],
 					"refRu": ["воды", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						},
+						{
+							"entry": "fundament",
+							"after": "."
+						}
+					],
+					"refEn": ["above the firmament", 0],
+					"refRu": ["над твердью", 0]
 				},
 				{
 					"tokens": [
@@ -996,9 +994,17 @@
 				{
 					"tokens": [
 						{
-							"entry": "sub",
-							"after": "-",
+							"entry": "woDa",
 							"before": "«"
+						}
+					],
+					"refEn": ["waters", 0],
+					"refRu": ["вода", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "sub"
 						},
 						{
 							"entry": "Atmosfera"
@@ -1006,15 +1012,6 @@
 					],
 					"refEn": ["under the heaven", 0],
 					"refRu": ["под небом", 0]
-				},
-				{
-					"tokens": [
-						{
-							"entry": "woDa"
-						}
-					],
-					"refEn": ["waters", 0],
-					"refRu": ["вода", 0]
 				},
 				{
 					"tokens": [
@@ -2535,25 +2532,646 @@
 			"label": "20",
 			"enText": "And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.",
 			"ruText": "И сказал Бог: да произведёт вода пресмыкающихся, душу живую; и птицы да полетят над землёю, по тверди небесной.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ","
+						}
+					],
+					"refEn": ["said", 0],
+					"refRu": ["сказал", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa",
+							"before": "«"
+						}
+					],
+					"refEn": ["the waters", 0],
+					"refRu": ["вода", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["Let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mAss"
+						},
+						{
+							"entry": "prod'uktAt"
+						}
+					],
+					"refEn": ["bring forth abundantly", 0],
+					"refRu": ["произведёт", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "rept'Yl",
+							"after": ","
+						}
+					],
+					"refEn": ["the moving creature", 0],
+					"refRu": ["пресмыкающихся", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "bYo"
+						},
+						{
+							"entry": "f'auna",
+							"after": ";"
+						}
+					],
+					"refEn": ["that hath life", 0],
+					"refRu": ["душу живую", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "AviAtor"
+						}
+					],
+					"refEn": ["fowl", 0],
+					"refRu": ["птицы", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["may", 0],
+					"refRu": ["да", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Avi'At"
+						}
+					],
+					"refEn": ["fly", 0],
+					"refRu": ["полетят", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["above", 0],
+					"refRu": ["над", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra"
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["землёю", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["по", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "Atmosfera"
+						}
+					],
+					"refEn": ["of heaven", 0],
+					"refRu": ["небесной", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fundament",
+							"after": "»."
+						}
+					],
+					"refEn": ["the open firmament", 0],
+					"refRu": ["тверди", 0]
+				}
+			]
 		},
 		{
 			"label": "21",
 			"enText": "And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good.",
 			"ruText": "И сотворил Бог рыб больших и всякую душу животных пресмыкающихся, которых произвела вода, по роду их, и всякую птицу пернатую по роду её. И увидел Бог, что это хорошо.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "kreAtIv'At"
+						}
+					],
+					"refEn": ["created", 0],
+					"refRu": ["сотворил", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "mega"
+						}
+					],
+					"refEn": ["great", 0],
+					"refRu": ["больших", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "oke'an",
+							"after": "-"
+						},
+						{
+							"entry": "monstr"
+						}
+					],
+					"refEn": ["whales", 0],
+					"refRu": ["рыб", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tot'al",
+							"after": "-"
+						}
+					],
+					"refEn": ["every", 0],
+					"refRu": ["всякую", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tYp"
+						}
+					],
+					"refEn": ["after their kind", 0],
+					"refRu": ["по роду их", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "rept'Yl"
+						}
+					],
+					"refEn": ["that moveth", 0],
+					"refRu": ["пресмыкающихся", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "bYo"
+						}
+					],
+					"refEn": ["living", 0],
+					"refRu": ["душу", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "f'auna",
+							"after": ","
+						}
+					],
+					"refEn": ["creature", 0],
+					"refRu": ["животных", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa"
+						},
+						{
+							"entry": "mAss",
+							"after": "-"
+						},
+						{
+							"entry": "produkt",
+							"after": ","
+						}
+					],
+					"refEn": ["which the waters brought forth abundantly", 0],
+					"refRu": ["которых произвела вода", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tot'al",
+							"after": "-"
+						}
+					],
+					"refEn": ["every", 1],
+					"refRu": ["всякую", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tYp"
+						}
+					],
+					"refEn": ["after his kind", 0],
+					"refRu": ["по роду её", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plum'aZ"
+						}
+					],
+					"refEn": ["winged", 0],
+					"refRu": ["пернатую", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "AviAtor",
+							"after": "."
+						}
+					],
+					"refEn": ["fowl", 0],
+					"refRu": ["птицу", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 2],
+					"refRu": ["И", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 1],
+					"refRu": ["Бог", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "vIzual'At",
+							"after": ";"
+						}
+					],
+					"refEn": ["saw", 0],
+					"refRu": ["увидел", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "tIp·top",
+							"after": "."
+						}
+					],
+					"refEn": ["that it was good", 0],
+					"refRu": ["что это хорошо", 0]
+				}
+			]
 		},
 		{
 			"label": "22",
 			"enText": "And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.",
 			"ruText": "И благословил их Бог, говоря: плодитесь и размножайтесь, и наполняйте воды в морях, и птицы да размножаются на земле.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "allah"
+						}
+					],
+					"refEn": ["God", 0],
+					"refRu": ["Бог", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "fAvor'At"
+						}
+					],
+					"refEn": ["blessed", 0],
+					"refRu": ["благословил", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "f'auna",
+							"after": ","
+						}
+					],
+					"refEn": ["them", 0],
+					"refRu": ["их", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "deklAr'At",
+							"after": ","
+						}
+					],
+					"refEn": ["saying", 0],
+					"refRu": ["говоря", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go",
+							"before": "«"
+						},
+						{
+							"entry": "fr'uktAt"
+						}
+					],
+					"refEn": ["Be fruitful", 0],
+					"refRu": ["плодитесь", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						},
+						{
+							"entry": "reprod'uktAt",
+							"after": ","
+						}
+					],
+					"refEn": ["multiply", 0],
+					"refRu": ["размножайтесь", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 1],
+					"refRu": ["и", 1]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						},
+						{
+							"entry": "popul'At"
+						}
+					],
+					"refEn": ["fill", 0],
+					"refRu": ["наполняйте", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "woDa"
+						}
+					],
+					"refEn": ["the waters", 0],
+					"refRu": ["воды", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "endo"
+						}
+					],
+					"refEn": ["in", 0],
+					"refRu": ["в", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "oke'an",
+							"after": ";"
+						}
+					],
+					"refEn": ["the seas", 0],
+					"refRu": ["морях", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["and", 2],
+					"refRu": ["и", 2]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "AviAtor"
+						}
+					],
+					"refEn": ["fowl", 0],
+					"refRu": ["птицы", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "go"
+						}
+					],
+					"refEn": ["let", 0],
+					"refRu": ["да", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "reprod'uktAt"
+						}
+					],
+					"refEn": ["multiply", 1],
+					"refRu": ["размножаются", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "supr"
+						}
+					],
+					"refEn": ["in", 1],
+					"refRu": ["на", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "terra",
+							"after": "»."
+						}
+					],
+					"refEn": ["the earth", 0],
+					"refRu": ["земле", 0]
+				}
+			]
 		},
 		{
 			"label": "23",
 			"enText": "And the evening and the morning were the fifth day.",
 			"ruText": "И был вечер, и было утро: день пятый.",
-			"phrases": []
+			"phrases": [
+				{
+					"tokens": [
+						{
+							"entry": "i"
+						}
+					],
+					"refEn": ["And", 0],
+					"refRu": ["И", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·fYn'al"
+						}
+					],
+					"refEn": ["evening", 0],
+					"refRu": ["вечер", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "plus"
+						}
+					],
+					"refEn": ["and", 0],
+					"refRu": ["и", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den·st'art",
+							"after": " —"
+						}
+					],
+					"refEn": ["morning", 0],
+					"refRu": ["утро", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "numr",
+							"after": "-"
+						},
+						{
+							"entry": "kwInt"
+						}
+					],
+					"refEn": ["the fifth", 0],
+					"refRu": ["пятый", 0]
+				},
+				{
+					"tokens": [
+						{
+							"entry": "den",
+							"after": "."
+						}
+					],
+					"refEn": ["day", 0],
+					"refRu": ["день", 0]
+				}
+			]
 		},
 		{
 			"label": "24",
